@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fileutil_4',['FileUtil',['../classnet_1_1minecraft_1_1util_1_1_file_util.html',1,'net::minecraft::util']]]
+  ['clientchatevent_6',['ClientChatEvent',['../classnet_1_1minecraftforge_1_1client_1_1event_1_1_client_chat_event.html',1,'net::minecraftforge::client::event']]]
 ];
