@@ -24,15 +24,17 @@
 */
 var NAVTREE =
 [
-  [ "Forge Community Wiki: JavaDocs", "index.html", [
+  [ "My Project", "index.html", [
     [ "Test", "md_src_docs__test.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ]
   ] ]
@@ -40,7 +42,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"classnet_1_1minecraft_1_1client_1_1gui_1_1_abstract_gui.html#a68f8eeaf363746d678c9ac36c320f545"
+"",
+"functions_vars.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
