@@ -117,7 +117,7 @@ loadScripts(document, 'script');</script>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i2">
-<td class="col-first"><code>default java.util.List&lt;com.mojang.datafixers.util.Pair&lt;<a href="../../../minecraft/client/renderer/model/IBakedModel.html" title="interface in net.minecraft.client.renderer.model">IBakedModel</a>,&#8203;<a href="../../../minecraft/client/renderer/RenderType.html" title="class in net.minecraft.client.renderer">RenderType</a>&gt;&gt;</code></td>
+<td class="col-first"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.mojang.datafixers.util.Pair&lt;<a href="../../../minecraft/client/renderer/model/IBakedModel.html" title="interface in net.minecraft.client.renderer.model">IBakedModel</a>,&#8203;<a href="../../../minecraft/client/renderer/RenderType.html" title="class in net.minecraft.client.renderer">RenderType</a>&gt;&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getLayerModels(net.minecraft.item.ItemStack,boolean)">getLayerModels</a></span>&#8203;(<a href="../../../minecraft/item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
 boolean&nbsp;fabulous)</code></th>
 <td class="col-last">&nbsp;</td>
@@ -136,10 +136,10 @@ boolean&nbsp;fabulous)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i5">
-<td class="col-first"><code>default java.util.List&lt;<a href="../../../minecraft/client/renderer/model/BakedQuad.html" title="class in net.minecraft.client.renderer.model">BakedQuad</a>&gt;</code></td>
+<td class="col-first"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../minecraft/client/renderer/model/BakedQuad.html" title="class in net.minecraft.client.renderer.model">BakedQuad</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getQuads(net.minecraft.block.BlockState,net.minecraft.util.Direction,java.util.Random,net.minecraftforge.client.model.data.IModelData)">getQuads</a></span>&#8203;(<a href="../../../minecraft/block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
 <a href="../../../minecraft/util/Direction.html" title="enum in net.minecraft.util">Direction</a>&nbsp;side,
-java.util.Random&nbsp;rand,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html" title="class or interface in java.util" class="external-link">Random</a>&nbsp;rand,
 <a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a>&nbsp;extraData)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -183,14 +183,14 @@ java.util.Random&nbsp;rand,
 <li>
 <section class="detail" id="getQuads(net.minecraft.block.BlockState,net.minecraft.util.Direction,java.util.Random,net.minecraftforge.client.model.data.IModelData)">
 <h3>getQuads</h3>
-<div class="member-signature"><span class="annotations">@Nonnull
-</span><span class="modifiers">default</span>&nbsp;<span class="return-type">java.util.List&lt;<a href="../../../minecraft/client/renderer/model/BakedQuad.html" title="class in net.minecraft.client.renderer.model">BakedQuad</a>&gt;</span>&nbsp;<span class="member-name">getQuads</span>&#8203;(<span class="parameters">@Nullable
+<div class="member-signature"><span class="annotations"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../minecraft/client/renderer/model/BakedQuad.html" title="class in net.minecraft.client.renderer.model">BakedQuad</a>&gt;</span>&nbsp;<span class="member-name">getQuads</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 <a href="../../../minecraft/block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
-@Nullable
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 <a href="../../../minecraft/util/Direction.html" title="enum in net.minecraft.util">Direction</a>&nbsp;side,
-@Nonnull
-java.util.Random&nbsp;rand,
-@Nonnull
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html" title="class or interface in java.util" class="external-link">Random</a>&nbsp;rand,
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a>&nbsp;extraData)</span></div>
 </section>
 </li>
@@ -216,21 +216,21 @@ java.util.Random&nbsp;rand,
 <li>
 <section class="detail" id="getModelData(net.minecraft.world.IBlockDisplayReader,net.minecraft.util.math.BlockPos,net.minecraft.block.BlockState,net.minecraftforge.client.model.data.IModelData)">
 <h3>getModelData</h3>
-<div class="member-signature"><span class="annotations">@Nonnull
-</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a></span>&nbsp;<span class="member-name">getModelData</span>&#8203;(<span class="parameters">@Nonnull
+<div class="member-signature"><span class="annotations"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a></span>&nbsp;<span class="member-name">getModelData</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../../../minecraft/world/IBlockDisplayReader.html" title="interface in net.minecraft.world">IBlockDisplayReader</a>&nbsp;world,
-@Nonnull
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../../../minecraft/util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-@Nonnull
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../../../minecraft/block/BlockState.html" title="class in net.minecraft.block">BlockState</a>&nbsp;state,
-@Nonnull
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a>&nbsp;tileData)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getParticleTexture(net.minecraftforge.client.model.data.IModelData)">
 <h3>getParticleTexture</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../../../minecraft/client/renderer/texture/TextureAtlasSprite.html" title="class in net.minecraft.client.renderer.texture">TextureAtlasSprite</a></span>&nbsp;<span class="member-name">getParticleTexture</span>&#8203;(<span class="parameters">@Nonnull
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../../../minecraft/client/renderer/texture/TextureAtlasSprite.html" title="class in net.minecraft.client.renderer.texture">TextureAtlasSprite</a></span>&nbsp;<span class="member-name">getParticleTexture</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html" title="class or interface in javax.annotation" class="external-link">@Nonnull</a>
 <a href="../model/data/IModelData.html" title="interface in net.minecraftforge.client.model.data">IModelData</a>&nbsp;data)</span></div>
 </section>
 </li>
@@ -243,7 +243,7 @@ java.util.Random&nbsp;rand,
 <li>
 <section class="detail" id="getLayerModels(net.minecraft.item.ItemStack,boolean)">
 <h3>getLayerModels</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">java.util.List&lt;com.mojang.datafixers.util.Pair&lt;<a href="../../../minecraft/client/renderer/model/IBakedModel.html" title="interface in net.minecraft.client.renderer.model">IBakedModel</a>,&#8203;<a href="../../../minecraft/client/renderer/RenderType.html" title="class in net.minecraft.client.renderer">RenderType</a>&gt;&gt;</span>&nbsp;<span class="member-name">getLayerModels</span>&#8203;(<span class="parameters"><a href="../../../minecraft/item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.mojang.datafixers.util.Pair&lt;<a href="../../../minecraft/client/renderer/model/IBakedModel.html" title="interface in net.minecraft.client.renderer.model">IBakedModel</a>,&#8203;<a href="../../../minecraft/client/renderer/RenderType.html" title="class in net.minecraft.client.renderer">RenderType</a>&gt;&gt;</span>&nbsp;<span class="member-name">getLayerModels</span>&#8203;(<span class="parameters"><a href="../../../minecraft/item/ItemStack.html" title="class in net.minecraft.item">ItemStack</a>&nbsp;itemStack,
 boolean&nbsp;fabulous)</span></div>
 </section>
 </li>

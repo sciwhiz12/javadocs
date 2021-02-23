@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.village</a></div>
 <h1 title="Class PointOfInterestManager" class="title">Class PointOfInterestManager</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree">java.lang.Object
+<div class="inheritance" title="Inheritance Tree"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="../world/chunk/storage/RegionSectionCache.html" title="class in net.minecraft.world.chunk.storage">net.minecraft.world.chunk.storage.RegionSectionCache</a>&lt;<a href="PointOfInterestData.html" title="class in net.minecraft.village">PointOfInterestData</a>&gt;
 <div class="inheritance">net.minecraft.village.PointOfInterestManager</div>
 </div>
@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>java.lang.AutoCloseable</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="type-name-label">PointOfInterestManager</span>
@@ -132,7 +132,7 @@ extends <a href="../world/chunk/storage/RegionSectionCache.html" title="class in
 </thead>
 <tbody>
 <tr class="alt-color">
-<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.io.File,com.mojang.datafixers.DataFixer,boolean)">PointOfInterestManager</a></span>&#8203;(java.io.File&nbsp;folder,
+<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.io.File,com.mojang.datafixers.DataFixer,boolean)">PointOfInterestManager</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;folder,
 com.mojang.datafixers.DataFixer&nbsp;fixer,
 boolean&nbsp;sync)</code></th>
 <td class="col-last">&nbsp;</td>
@@ -180,47 +180,47 @@ int&nbsp;coordinateOffset)</code></th>
 <tr class="row-color" id="i3">
 <td class="col-first"><code>boolean</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#exists(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">exists</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219138_2_)</code></th>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219138_2_)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i4">
-<td class="col-first"><code>java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#find(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">find</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#find(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">find</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i5">
-<td class="col-first"><code>java.util.stream.Stream&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#findAll(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">findAll</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#findAll(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">findAll</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i6">
-<td class="col-first"><code>java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_219146_b(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_219146_b</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_219146_b(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_219146_b</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i7">
-<td class="col-first"><code>java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_234148_d_(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_234148_d_</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_234148_d_(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_234148_d_</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i8">
-<td class="col-first"><code>java.util.stream.Stream&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_242324_b(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_242324_b</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_242324_1_,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#func_242324_b(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">func_242324_b</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_242324_1_,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;p_242324_3_,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
@@ -228,39 +228,39 @@ int&nbsp;distance,
 </tr>
 <tr class="row-color" id="i9">
 <td class="col-first"><code>long</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getCountInRange(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">getCountInRange</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219145_1_,
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getCountInRange(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">getCountInRange</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219145_1_,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i10">
-<td class="col-first"><code>java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getInChunk(java.util.function.Predicate,net.minecraft.util.math.ChunkPos,net.minecraft.village.PointOfInterestManager.Status)">getInChunk</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219137_1_,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getInChunk(java.util.function.Predicate,net.minecraft.util.math.ChunkPos,net.minecraft.village.PointOfInterestManager.Status)">getInChunk</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219137_1_,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;posChunk,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i11">
-<td class="col-first"><code>java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getInSquare(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">getInSquare</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getInSquare(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">getInSquare</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i12">
-<td class="col-first"><code>java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getRandom(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.village.PointOfInterestManager.Status,net.minecraft.util.math.BlockPos,int,java.util.Random)">getRandom</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getRandom(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.village.PointOfInterestManager.Status,net.minecraft.util.math.BlockPos,int,java.util.Random)">getRandom</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
-java.util.Random&nbsp;rand)</code></th>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html" title="class or interface in java.util" class="external-link">Random</a>&nbsp;rand)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i13">
-<td class="col-first"><code>java.util.Optional&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getType(net.minecraft.util.math.BlockPos)">getType</a></span>&#8203;(<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -296,16 +296,16 @@ java.util.Random&nbsp;rand)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i20">
-<td class="col-first"><code>java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#take(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int)">take</a></span>&#8203;(java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#take(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int)">take</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i21">
 <td class="col-first"><code>void</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(java.util.function.BooleanSupplier&nbsp;p_219115_1_)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#tick(java.util.function.BooleanSupplier)">tick</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;p_219115_1_)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 </tbody>
@@ -316,8 +316,8 @@ int&nbsp;distance)</code></th>
 <h3 id="methods.inherited.from.class.net.minecraft.world.chunk.storage.RegionSectionCache">Methods inherited from class&nbsp;net.minecraft.world.chunk.storage.<a href="../world/chunk/storage/RegionSectionCache.html" title="class in net.minecraft.world.chunk.storage">RegionSectionCache</a></h3>
 <code><a href="../world/chunk/storage/RegionSectionCache.html#close()">close</a>, <a href="../world/chunk/storage/RegionSectionCache.html#func_219106_c(long)">func_219106_c</a>, <a href="../world/chunk/storage/RegionSectionCache.html#func_219113_d(long)">func_219113_d</a>, <a href="../world/chunk/storage/RegionSectionCache.html#func_219114_b(net.minecraft.util.math.SectionPos)">func_219114_b</a>, <a href="../world/chunk/storage/RegionSectionCache.html#func_235995_e_(long)">func_235995_e_</a>, <a href="../world/chunk/storage/RegionSectionCache.html#saveIfDirty(net.minecraft.util.math.ChunkPos)">saveIfDirty</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></div>
+<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>
@@ -332,7 +332,7 @@ int&nbsp;distance)</code></th>
 <li>
 <section class="detail" id="&lt;init&gt;(java.io.File,com.mojang.datafixers.DataFixer,boolean)">
 <h3>PointOfInterestManager</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="member-name">PointOfInterestManager</span>&#8203;(<span class="parameters">java.io.File&nbsp;folder,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="member-name">PointOfInterestManager</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;folder,
 com.mojang.datafixers.DataFixer&nbsp;fixer,
 boolean&nbsp;sync)</span></div>
 </section>
@@ -361,7 +361,7 @@ boolean&nbsp;sync)</span></div>
 <li>
 <section class="detail" id="getCountInRange(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>getCountInRange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="member-name">getCountInRange</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219145_1_,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="member-name">getCountInRange</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219145_1_,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -377,7 +377,7 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="getInSquare(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>getInSquare</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">getInSquare</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">getInSquare</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -386,7 +386,7 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="func_219146_b(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>func_219146_b</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">func_219146_b</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">func_219146_b</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -395,7 +395,7 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="getInChunk(java.util.function.Predicate,net.minecraft.util.math.ChunkPos,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>getInChunk</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.stream.Stream&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">getInChunk</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219137_1_,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="PointOfInterest.html" title="class in net.minecraft.village">PointOfInterest</a>&gt;</span>&nbsp;<span class="member-name">getInChunk</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219137_1_,
 <a href="../util/math/ChunkPos.html" title="class in net.minecraft.util.math">ChunkPos</a>&nbsp;posChunk,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
 </section>
@@ -403,8 +403,8 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="findAll(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>findAll</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.stream.Stream&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">findAll</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">findAll</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -413,8 +413,8 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="func_242324_b(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>func_242324_b</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.stream.Stream&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">func_242324_b</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_242324_1_,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">func_242324_b</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_242324_1_,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;p_242324_3_,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -423,8 +423,8 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="find(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>find</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">find</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">find</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -433,7 +433,7 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="func_234148_d_(java.util.function.Predicate,net.minecraft.util.math.BlockPos,int,net.minecraft.village.PointOfInterestManager.Status)">
 <h3>func_234148_d_</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">func_234148_d_</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">func_234148_d_</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status)</span></div>
@@ -442,8 +442,8 @@ int&nbsp;distance,
 <li>
 <section class="detail" id="take(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.util.math.BlockPos,int)">
 <h3>take</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">take</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">take</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance)</span></div>
 </section>
@@ -451,12 +451,12 @@ int&nbsp;distance)</span></div>
 <li>
 <section class="detail" id="getRandom(java.util.function.Predicate,java.util.function.Predicate,net.minecraft.village.PointOfInterestManager.Status,net.minecraft.util.math.BlockPos,int,java.util.Random)">
 <h3>getRandom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.Optional&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">getRandom</span>&#8203;(<span class="parameters">java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
-java.util.function.Predicate&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;</span>&nbsp;<span class="member-name">getRandom</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;typePredicate,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&gt;&nbsp;posPredicate,
 <a href="PointOfInterestManager.Status.html" title="enum in net.minecraft.village">PointOfInterestManager.Status</a>&nbsp;status,
 <a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
 int&nbsp;distance,
-java.util.Random&nbsp;rand)</span></div>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/Random.html" title="class or interface in java.util" class="external-link">Random</a>&nbsp;rand)</span></div>
 </section>
 </li>
 <li>
@@ -469,13 +469,13 @@ java.util.Random&nbsp;rand)</span></div>
 <section class="detail" id="exists(net.minecraft.util.math.BlockPos,java.util.function.Predicate)">
 <h3>exists</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="member-name">exists</span>&#8203;(<span class="parameters"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos,
-java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219138_2_)</span></div>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html" title="class or interface in java.util.function" class="external-link">Predicate</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;&nbsp;p_219138_2_)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType(net.minecraft.util.math.BlockPos)">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.Optional&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;</span>&nbsp;<span class="member-name">getType</span>&#8203;(<span class="parameters"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="PointOfInterestType.html" title="class in net.minecraft.village">PointOfInterestType</a>&gt;</span>&nbsp;<span class="member-name">getType</span>&#8203;(<span class="parameters"><a href="../util/math/BlockPos.html" title="class in net.minecraft.util.math">BlockPos</a>&nbsp;pos)</span></div>
 </section>
 </li>
 <li>
@@ -487,7 +487,7 @@ java.util.function.Predicate&lt;<a href="PointOfInterestType.html" title="class 
 <li>
 <section class="detail" id="tick(java.util.function.BooleanSupplier)">
 <h3>tick</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">tick</span>&#8203;(<span class="parameters">java.util.function.BooleanSupplier&nbsp;p_219115_1_)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">tick</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;p_219115_1_)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../world/chunk/storage/RegionSectionCache.html#tick(java.util.function.BooleanSupplier)">tick</a></code>&nbsp;in class&nbsp;<code><a href="../world/chunk/storage/RegionSectionCache.html" title="class in net.minecraft.world.chunk.storage">RegionSectionCache</a>&lt;<a href="PointOfInterestData.html" title="class in net.minecraft.village">PointOfInterestData</a>&gt;</code></dd>

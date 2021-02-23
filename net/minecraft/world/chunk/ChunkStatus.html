@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.world.chunk</a></div>
 <h1 title="Class ChunkStatus" class="title">Class ChunkStatus</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree">java.lang.Object
+<div class="inheritance" title="Inheritance Tree"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="../../../minecraftforge/registries/ForgeRegistryEntry.html" title="class in net.minecraftforge.registries">net.minecraftforge.registries.ForgeRegistryEntry</a>&lt;<a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;
 <div class="inheritance">net.minecraft.world.chunk.ChunkStatus</div>
 </div>
@@ -223,10 +223,10 @@ extends <a href="../../../minecraftforge/registries/ForgeRegistryEntry.html" tit
 </thead>
 <tbody>
 <tr class="alt-color">
-<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String,net.minecraft.world.chunk.ChunkStatus,int,java.util.EnumSet,net.minecraft.world.chunk.ChunkStatus.Type,net.minecraft.world.chunk.ChunkStatus.IGenerationWorker,net.minecraft.world.chunk.ChunkStatus.ILoadingWorker)">ChunkStatus</a></span>&#8203;(java.lang.String&nbsp;nameIn,
+<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String,net.minecraft.world.chunk.ChunkStatus,int,java.util.EnumSet,net.minecraft.world.chunk.ChunkStatus.Type,net.minecraft.world.chunk.ChunkStatus.IGenerationWorker,net.minecraft.world.chunk.ChunkStatus.ILoadingWorker)">ChunkStatus</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nameIn,
 <a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;parentIn,
 int&nbsp;taskRangeIn,
-java.util.EnumSet&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;&nbsp;heightmapsIn,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;&nbsp;heightmapsIn,
 <a href="ChunkStatus.Type.html" title="enum in net.minecraft.world.chunk">ChunkStatus.Type</a>&nbsp;typeIn,
 net.minecraft.world.chunk.ChunkStatus.IGenerationWorker&nbsp;generationWorkerIn,
 net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</code></th>
@@ -255,30 +255,30 @@ net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</code
 <tbody>
 <tr class="alt-color" id="i0">
 <td class="col-first"><code>static <a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a></code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#byName(java.lang.String)">byName</a></span>&#8203;(java.lang.String&nbsp;location)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#byName(java.lang.String)">byName</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;location)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i1">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#doGenerationWork(net.minecraft.world.server.ServerWorld,net.minecraft.world.gen.ChunkGenerator,net.minecraft.world.gen.feature.template.TemplateManager,net.minecraft.world.server.ServerWorldLightManager,java.util.function.Function,java.util.List)">doGenerationWork</a></span>&#8203;(<a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
 <a href="../gen/ChunkGenerator.html" title="class in net.minecraft.world.gen">ChunkGenerator</a>&nbsp;chunkGeneratorIn,
 <a href="../gen/feature/template/TemplateManager.html" title="class in net.minecraft.world.gen.feature.template">TemplateManager</a>&nbsp;templateManagerIn,
 <a href="../server/ServerWorldLightManager.html" title="class in net.minecraft.world.server">ServerWorldLightManager</a>&nbsp;lightManager,
-java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
-java.util.List&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&gt;&nbsp;chunks)</code></th>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&gt;&nbsp;chunks)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i2">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#doLoadingWork(net.minecraft.world.server.ServerWorld,net.minecraft.world.gen.feature.template.TemplateManager,net.minecraft.world.server.ServerWorldLightManager,java.util.function.Function,net.minecraft.world.chunk.IChunk)">doLoadingWork</a></span>&#8203;(<a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
 <a href="../gen/feature/template/TemplateManager.html" title="class in net.minecraft.world.gen.feature.template">TemplateManager</a>&nbsp;templateManagerIn,
 <a href="../server/ServerWorldLightManager.html" title="class in net.minecraft.world.server">ServerWorldLightManager</a>&nbsp;lightManager,
-java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
 <a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&nbsp;loadingChunk)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i3">
-<td class="col-first"><code>static java.util.List&lt;<a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;</code></td>
+<td class="col-first"><code>static <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getAll()">getAll</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -288,12 +288,12 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i5">
-<td class="col-first"><code>java.util.EnumSet&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getHeightMaps()">getHeightMaps</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i6">
-<td class="col-first"><code>java.lang.String</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -333,7 +333,7 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i14">
-<td class="col-first"><code>java.lang.String</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -345,8 +345,8 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <h3 id="methods.inherited.from.class.net.minecraftforge.registries.ForgeRegistryEntry">Methods inherited from class&nbsp;net.minecraftforge.registries.<a href="../../../minecraftforge/registries/ForgeRegistryEntry.html" title="class in net.minecraftforge.registries">ForgeRegistryEntry</a></h3>
 <code><a href="../../../minecraftforge/registries/ForgeRegistryEntry.html#getRegistryName()">getRegistryName</a>, <a href="../../../minecraftforge/registries/ForgeRegistryEntry.html#getRegistryType()">getRegistryType</a>, <a href="../../../minecraftforge/registries/ForgeRegistryEntry.html#setRegistryName(java.lang.String)">setRegistryName</a>, <a href="../../../minecraftforge/registries/ForgeRegistryEntry.html#setRegistryName(java.lang.String,java.lang.String)">setRegistryName</a>, <a href="../../../minecraftforge/registries/ForgeRegistryEntry.html#setRegistryName(net.minecraft.util.ResourceLocation)">setRegistryName</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></div>
+<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>
@@ -447,11 +447,11 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <li>
 <section class="detail" id="&lt;init&gt;(java.lang.String,net.minecraft.world.chunk.ChunkStatus,int,java.util.EnumSet,net.minecraft.world.chunk.ChunkStatus.Type,net.minecraft.world.chunk.ChunkStatus.IGenerationWorker,net.minecraft.world.chunk.ChunkStatus.ILoadingWorker)">
 <h3>ChunkStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="member-name">ChunkStatus</span>&#8203;(<span class="parameters">java.lang.String&nbsp;nameIn,
-@Nullable
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="member-name">ChunkStatus</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nameIn,
+<a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 <a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&nbsp;parentIn,
 int&nbsp;taskRangeIn,
-java.util.EnumSet&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;&nbsp;heightmapsIn,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;&nbsp;heightmapsIn,
 <a href="ChunkStatus.Type.html" title="enum in net.minecraft.world.chunk">ChunkStatus.Type</a>&nbsp;typeIn,
 net.minecraft.world.chunk.ChunkStatus.IGenerationWorker&nbsp;generationWorkerIn,
 net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</span></div>
@@ -468,7 +468,7 @@ net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</span
 <li>
 <section class="detail" id="getAll()">
 <h3>getAll</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">java.util.List&lt;<a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;</span>&nbsp;<span class="member-name">getAll</span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a>&gt;</span>&nbsp;<span class="member-name">getAll</span>()</div>
 </section>
 </li>
 <li>
@@ -498,7 +498,7 @@ net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</span
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.lang.String</span>&nbsp;<span class="member-name">getName</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="member-name">getName</span>()</div>
 </section>
 </li>
 <li>
@@ -510,21 +510,21 @@ net.minecraft.world.chunk.ChunkStatus.ILoadingWorker&nbsp;loadingWorkerIn)</span
 <li>
 <section class="detail" id="doGenerationWork(net.minecraft.world.server.ServerWorld,net.minecraft.world.gen.ChunkGenerator,net.minecraft.world.gen.feature.template.TemplateManager,net.minecraft.world.server.ServerWorldLightManager,java.util.function.Function,java.util.List)">
 <h3>doGenerationWork</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</span>&nbsp;<span class="member-name">doGenerationWork</span>&#8203;(<span class="parameters"><a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</span>&nbsp;<span class="member-name">doGenerationWork</span>&#8203;(<span class="parameters"><a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
 <a href="../gen/ChunkGenerator.html" title="class in net.minecraft.world.gen">ChunkGenerator</a>&nbsp;chunkGeneratorIn,
 <a href="../gen/feature/template/TemplateManager.html" title="class in net.minecraft.world.gen.feature.template">TemplateManager</a>&nbsp;templateManagerIn,
 <a href="../server/ServerWorldLightManager.html" title="class in net.minecraft.world.server">ServerWorldLightManager</a>&nbsp;lightManager,
-java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
-java.util.List&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&gt;&nbsp;chunks)</span></div>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&gt;&nbsp;chunks)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="doLoadingWork(net.minecraft.world.server.ServerWorld,net.minecraft.world.gen.feature.template.TemplateManager,net.minecraft.world.server.ServerWorldLightManager,java.util.function.Function,net.minecraft.world.chunk.IChunk)">
 <h3>doLoadingWork</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</span>&nbsp;<span class="member-name">doLoadingWork</span>&#8203;(<span class="parameters"><a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;</span>&nbsp;<span class="member-name">doLoadingWork</span>&#8203;(<span class="parameters"><a href="../server/ServerWorld.html" title="class in net.minecraft.world.server">ServerWorld</a>&nbsp;worldIn,
 <a href="../gen/feature/template/TemplateManager.html" title="class in net.minecraft.world.gen.feature.template">TemplateManager</a>&nbsp;templateManagerIn,
 <a href="../server/ServerWorldLightManager.html" title="class in net.minecraft.world.server">ServerWorldLightManager</a>&nbsp;lightManager,
-java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;java.util.concurrent.CompletableFuture&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;com.mojang.datafixers.util.Either&lt;<a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>,&#8203;<a href="../server/ChunkHolder.IChunkLoadingError.html" title="interface in net.minecraft.world.server">ChunkHolder.IChunkLoadingError</a>&gt;&gt;&gt;&nbsp;loadingFunction,
 <a href="IChunk.html" title="interface in net.minecraft.world.chunk">IChunk</a>&nbsp;loadingChunk)</span></div>
 </section>
 </li>
@@ -543,13 +543,13 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <li>
 <section class="detail" id="byName(java.lang.String)">
 <h3>byName</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a></span>&nbsp;<span class="member-name">byName</span>&#8203;(<span class="parameters">java.lang.String&nbsp;location)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChunkStatus.html" title="class in net.minecraft.world.chunk">ChunkStatus</a></span>&nbsp;<span class="member-name">byName</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;location)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getHeightMaps()">
 <h3>getHeightMaps</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.EnumSet&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;</span>&nbsp;<span class="member-name">getHeightMaps</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../gen/Heightmap.Type.html" title="enum in net.minecraft.world.gen">Heightmap.Type</a>&gt;</span>&nbsp;<span class="member-name">getHeightMaps</span>()</div>
 </section>
 </li>
 <li>
@@ -561,10 +561,10 @@ java.util.function.Function&lt;<a href="IChunk.html" title="interface in net.min
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.lang.String</span>&nbsp;<span class="member-name">toString</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="member-name">toString</span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 </dl>
 </section>
 </li>

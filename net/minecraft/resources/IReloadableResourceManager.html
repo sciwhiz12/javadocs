@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>java.lang.AutoCloseable</code>, <code><a href="IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <pre>public interface <span class="type-name-label">IReloadableResourceManager</span>
-extends <a href="IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a>, java.lang.AutoCloseable</pre>
+extends <a href="IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></pre>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,18 +128,18 @@ extends <a href="IResourceManager.html" title="interface in net.minecraft.resour
 </tr>
 <tr class="alt-color" id="i2">
 <td class="col-first"><code><a href="IAsyncReloader.html" title="interface in net.minecraft.resources">IAsyncReloader</a></code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#reloadResources(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">reloadResources</a></span>&#8203;(java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor,
-java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor,
-java.util.List&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#reloadResources(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">reloadResources</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i3">
-<td class="col-first"><code>default java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#reloadResourcesAndThen(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">reloadResourcesAndThen</a></span>&#8203;(java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor,
-java.util.List&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks,
-java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor)</code></th>
+<td class="col-first"><code>default <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#reloadResourcesAndThen(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">reloadResourcesAndThen</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 </tbody>
@@ -163,19 +163,19 @@ java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enu
 <li>
 <section class="detail" id="reloadResourcesAndThen(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.List,java.util.concurrent.CompletableFuture)">
 <h3>reloadResourcesAndThen</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</span>&nbsp;<span class="member-name">reloadResourcesAndThen</span>&#8203;(<span class="parameters">java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor,
-java.util.List&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks,
-java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;</span>&nbsp;<span class="member-name">reloadResourcesAndThen</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="reloadResources(java.util.concurrent.Executor,java.util.concurrent.Executor,java.util.concurrent.CompletableFuture,java.util.List)">
 <h3>reloadResources</h3>
-<div class="member-signature"><span class="return-type"><a href="IAsyncReloader.html" title="interface in net.minecraft.resources">IAsyncReloader</a></span>&nbsp;<span class="member-name">reloadResources</span>&#8203;(<span class="parameters">java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor,
-java.util.concurrent.CompletableFuture&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor,
-java.util.List&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks)</span></div>
+<div class="member-signature"><span class="return-type"><a href="IAsyncReloader.html" title="interface in net.minecraft.resources">IAsyncReloader</a></span>&nbsp;<span class="member-name">reloadResources</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../util/Unit.html" title="enum in net.minecraft.util">Unit</a>&gt;&nbsp;waitingFor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="IResourcePack.html" title="interface in net.minecraft.resources">IResourcePack</a>&gt;&nbsp;resourcePacks)</span></div>
 </section>
 </li>
 <li>
@@ -190,7 +190,7 @@ java.util.List&lt;<a href="IResourcePack.html" title="interface in net.minecraft
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="member-name">close</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code>close</code>&nbsp;in interface&nbsp;<code>java.lang.AutoCloseable</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 </section>
 </li>

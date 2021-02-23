@@ -76,18 +76,18 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.client.renderer.texture</a></div>
 <h1 title="Class TextureManager" class="title">Class TextureManager</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree">java.lang.Object
+<div class="inheritance" title="Inheritance Tree"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.client.renderer.texture.TextureManager</div>
 </div>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>java.lang.AutoCloseable</code>, <code><a href="ITickable.html" title="interface in net.minecraft.client.renderer.texture">ITickable</a></code>, <code><a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a></code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="ITickable.html" title="interface in net.minecraft.client.renderer.texture">ITickable</a></code>, <code><a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="type-name-label">TextureManager</span>
-extends java.lang.Object
-implements <a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a>, <a href="ITickable.html" title="interface in net.minecraft.client.renderer.texture">ITickable</a>, java.lang.AutoCloseable</pre>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a>, <a href="ITickable.html" title="interface in net.minecraft.client.renderer.texture">ITickable</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></pre>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +181,7 @@ implements <a href="../../../resources/IFutureReloadListener.html" title="interf
 </tr>
 <tr class="row-color" id="i3">
 <td class="col-first"><code><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a></code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getDynamicTextureLocation(java.lang.String,net.minecraft.client.renderer.texture.DynamicTexture)">getDynamicTextureLocation</a></span>&#8203;(java.lang.String&nbsp;name,
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getDynamicTextureLocation(java.lang.String,net.minecraft.client.renderer.texture.DynamicTexture)">getDynamicTextureLocation</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
 <a href="DynamicTexture.html" title="class in net.minecraft.client.renderer.texture">DynamicTexture</a>&nbsp;texture)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -191,9 +191,9 @@ implements <a href="../../../resources/IFutureReloadListener.html" title="interf
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i5">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#loadAsync(net.minecraft.util.ResourceLocation,java.util.concurrent.Executor)">loadAsync</a></span>&#8203;(<a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a>&nbsp;textureLocation,
-java.util.concurrent.Executor&nbsp;executor)</code></th>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i6">
@@ -203,13 +203,13 @@ java.util.concurrent.Executor&nbsp;executor)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i7">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#reload(net.minecraft.resources.IFutureReloadListener.IStage,net.minecraft.resources.IResourceManager,net.minecraft.profiler.IProfiler,net.minecraft.profiler.IProfiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></span>&#8203;(<a href="../../../resources/IFutureReloadListener.IStage.html" title="interface in net.minecraft.resources">IFutureReloadListener.IStage</a>&nbsp;stage,
 <a href="../../../resources/IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a>&nbsp;resourceManager,
 <a href="../../../profiler/IProfiler.html" title="interface in net.minecraft.profiler">IProfiler</a>&nbsp;preparationsProfiler,
 <a href="../../../profiler/IProfiler.html" title="interface in net.minecraft.profiler">IProfiler</a>&nbsp;reloadProfiler,
-java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor)</code></th>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i8">
@@ -222,8 +222,8 @@ java.util.concurrent.Executor&nbsp;gameExecutor)</code></th>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></div>
+<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.net.minecraft.resources.IFutureReloadListener">Methods inherited from interface&nbsp;net.minecraft.resources.<a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a></h3>
 <code><a href="../../../resources/IFutureReloadListener.html#getSimpleName()">getSimpleName</a></code></div>
@@ -282,22 +282,22 @@ java.util.concurrent.Executor&nbsp;gameExecutor)</code></th>
 <li>
 <section class="detail" id="getTexture(net.minecraft.util.ResourceLocation)">
 <h3>getTexture</h3>
-<div class="member-signature"><span class="annotations">@Nullable
+<div class="member-signature"><span class="annotations"><a href="http://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Texture.html" title="class in net.minecraft.client.renderer.texture">Texture</a></span>&nbsp;<span class="member-name">getTexture</span>&#8203;(<span class="parameters"><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a>&nbsp;textureLocation)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDynamicTextureLocation(java.lang.String,net.minecraft.client.renderer.texture.DynamicTexture)">
 <h3>getDynamicTextureLocation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a></span>&nbsp;<span class="member-name">getDynamicTextureLocation</span>&#8203;(<span class="parameters">java.lang.String&nbsp;name,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a></span>&nbsp;<span class="member-name">getDynamicTextureLocation</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
 <a href="DynamicTexture.html" title="class in net.minecraft.client.renderer.texture">DynamicTexture</a>&nbsp;texture)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="loadAsync(net.minecraft.util.ResourceLocation,java.util.concurrent.Executor)">
 <h3>loadAsync</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</span>&nbsp;<span class="member-name">loadAsync</span>&#8203;(<span class="parameters"><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a>&nbsp;textureLocation,
-java.util.concurrent.Executor&nbsp;executor)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</span>&nbsp;<span class="member-name">loadAsync</span>&#8203;(<span class="parameters"><a href="../../../util/ResourceLocation.html" title="class in net.minecraft.util">ResourceLocation</a>&nbsp;textureLocation,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;executor)</span></div>
 </section>
 </li>
 <li>
@@ -322,19 +322,19 @@ java.util.concurrent.Executor&nbsp;executor)</span></div>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">close</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code>close</code>&nbsp;in interface&nbsp;<code>java.lang.AutoCloseable</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="reload(net.minecraft.resources.IFutureReloadListener.IStage,net.minecraft.resources.IResourceManager,net.minecraft.profiler.IProfiler,net.minecraft.profiler.IProfiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">
 <h3>reload</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</span>&nbsp;<span class="member-name">reload</span>&#8203;(<span class="parameters"><a href="../../../resources/IFutureReloadListener.IStage.html" title="interface in net.minecraft.resources">IFutureReloadListener.IStage</a>&nbsp;stage,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</span>&nbsp;<span class="member-name">reload</span>&#8203;(<span class="parameters"><a href="../../../resources/IFutureReloadListener.IStage.html" title="interface in net.minecraft.resources">IFutureReloadListener.IStage</a>&nbsp;stage,
 <a href="../../../resources/IResourceManager.html" title="interface in net.minecraft.resources">IResourceManager</a>&nbsp;resourceManager,
 <a href="../../../profiler/IProfiler.html" title="interface in net.minecraft.profiler">IProfiler</a>&nbsp;preparationsProfiler,
 <a href="../../../profiler/IProfiler.html" title="interface in net.minecraft.profiler">IProfiler</a>&nbsp;reloadProfiler,
-java.util.concurrent.Executor&nbsp;backgroundExecutor,
-java.util.concurrent.Executor&nbsp;gameExecutor)</span></div>
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;backgroundExecutor,
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a>&nbsp;gameExecutor)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../resources/IFutureReloadListener.html#reload(net.minecraft.resources.IFutureReloadListener.IStage,net.minecraft.resources.IResourceManager,net.minecraft.profiler.IProfiler,net.minecraft.profiler.IProfiler,java.util.concurrent.Executor,java.util.concurrent.Executor)">reload</a></code>&nbsp;in interface&nbsp;<code><a href="../../../resources/IFutureReloadListener.html" title="interface in net.minecraft.resources">IFutureReloadListener</a></code></dd>

@@ -74,24 +74,24 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">net.minecraft.util.concurrent</a></div>
-<h1 title="Class ThreadTaskExecutor" class="title">Class ThreadTaskExecutor&lt;R extends java.lang.Runnable&gt;</h1>
+<h1 title="Class ThreadTaskExecutor" class="title">Class ThreadTaskExecutor&lt;R extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&gt;</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree">java.lang.Object
+<div class="inheritance" title="Inheritance Tree"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">net.minecraft.util.concurrent.ThreadTaskExecutor&lt;R&gt;</div>
 </div>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>java.lang.AutoCloseable</code>, <code>java.util.concurrent.Executor</code>, <code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;R&gt;</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a></code>, <code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;R&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="RecursiveEventLoop.html" title="class in net.minecraft.util.concurrent">RecursiveEventLoop</a></code>, <code><a href="../../client/audio/SoundEngineExecutor.html" title="class in net.minecraft.client.audio">SoundEngineExecutor</a></code></dd>
 </dl>
 <hr>
-<pre>public abstract class <span class="type-name-label">ThreadTaskExecutor&lt;R extends java.lang.Runnable&gt;</span>
-extends java.lang.Object
-implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;R&gt;, java.util.concurrent.Executor</pre>
+<pre>public abstract class <span class="type-name-label">ThreadTaskExecutor&lt;R extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&gt;</span>
+extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;R&gt;, <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a></pre>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -112,7 +112,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <tbody>
 <tr class="alt-color">
 <td class="col-first"><code>protected </code></td>
-<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String)">ThreadTaskExecutor</a></span>&#8203;(java.lang.String&nbsp;nameIn)</code></th>
+<th class="col-constructor-name" scope="row"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String)">ThreadTaskExecutor</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nameIn)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 </tbody>
@@ -142,8 +142,8 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i1">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#deferTask(java.lang.Runnable)">deferTask</a></span>&#8203;(java.lang.Runnable&nbsp;taskIn)</code></th>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#deferTask(java.lang.Runnable)">deferTask</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i2">
@@ -158,7 +158,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 </tr>
 <tr class="alt-color" id="i4">
 <td class="col-first"><code>void</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#driveUntil(java.util.function.BooleanSupplier)">driveUntil</a></span>&#8203;(java.util.function.BooleanSupplier&nbsp;isDone)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#driveUntil(java.util.function.BooleanSupplier)">driveUntil</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;isDone)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i5">
@@ -173,16 +173,16 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 </tr>
 <tr class="row-color" id="i7">
 <td class="col-first"><code>void</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#execute(java.lang.Runnable)">execute</a></span>&#8203;(java.lang.Runnable&nbsp;p_execute_1_)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#execute(java.lang.Runnable)">execute</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;p_execute_1_)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i8">
-<td class="col-first"><code>protected abstract java.lang.Thread</code></td>
+<td class="col-first"><code>protected abstract <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html" title="class or interface in java.lang" class="external-link">Thread</a></code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getExecutionThread()">getExecutionThread</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i9">
-<td class="col-first"><code>java.lang.String</code></td>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></td>
 <th class="col-second" scope="row"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
@@ -202,13 +202,13 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i13">
-<td class="col-first"><code>java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#runAsync(java.lang.Runnable)">runAsync</a></span>&#8203;(java.lang.Runnable&nbsp;taskIn)</code></th>
+<td class="col-first"><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#runAsync(java.lang.Runnable)">runAsync</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i14">
 <td class="col-first"><code>void</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#runImmediately(java.lang.Runnable)">runImmediately</a></span>&#8203;(java.lang.Runnable&nbsp;taskIn)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#runImmediately(java.lang.Runnable)">runImmediately</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i15">
@@ -217,8 +217,8 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="alt-color" id="i16">
-<td class="col-first"><code>&lt;V&gt;&nbsp;java.util.concurrent.CompletableFuture&lt;V&gt;</code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#supplyAsync(java.util.function.Supplier)">supplyAsync</a></span>&#8203;(java.util.function.Supplier&lt;V&gt;&nbsp;supplier)</code></th>
+<td class="col-first"><code>&lt;V&gt;&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;V&gt;</code></td>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#supplyAsync(java.util.function.Supplier)">supplyAsync</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;V&gt;&nbsp;supplier)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 <tr class="row-color" id="i17">
@@ -228,7 +228,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 </tr>
 <tr class="alt-color" id="i18">
 <td class="col-first"><code>protected abstract <a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a></code></td>
-<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#wrapTask(java.lang.Runnable)">wrapTask</a></span>&#8203;(java.lang.Runnable&nbsp;runnable)</code></th>
+<th class="col-second" scope="row"><code><span class="member-name-link"><a href="#wrapTask(java.lang.Runnable)">wrapTask</a></span>&#8203;(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;runnable)</code></th>
 <td class="col-last">&nbsp;</td>
 </tr>
 </tbody>
@@ -236,8 +236,8 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></div>
+<h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.net.minecraft.util.concurrent.ITaskExecutor">Methods inherited from interface&nbsp;net.minecraft.util.concurrent.<a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a></h3>
 <code><a href="ITaskExecutor.html#close()">close</a>, <a href="ITaskExecutor.html#func_213141_a(java.util.function.Function)">func_213141_a</a>, <a href="ITaskExecutor.html#func_233528_c_(java.util.function.Function)">func_233528_c_</a></code></div>
@@ -255,7 +255,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <li>
 <section class="detail" id="&lt;init&gt;(java.lang.String)">
 <h3>ThreadTaskExecutor</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="member-name">ThreadTaskExecutor</span>&#8203;(<span class="parameters">java.lang.String&nbsp;nameIn)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="member-name">ThreadTaskExecutor</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nameIn)</span></div>
 </section>
 </li>
 </ul>
@@ -269,7 +269,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <li>
 <section class="detail" id="wrapTask(java.lang.Runnable)">
 <h3>wrapTask</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a></span>&nbsp;<span class="member-name">wrapTask</span>&#8203;(<span class="parameters">java.lang.Runnable&nbsp;runnable)</span></div>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a></span>&nbsp;<span class="member-name">wrapTask</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;runnable)</span></div>
 </section>
 </li>
 <li>
@@ -287,7 +287,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <li>
 <section class="detail" id="getExecutionThread()">
 <h3>getExecutionThread</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">java.lang.Thread</span>&nbsp;<span class="member-name">getExecutionThread</span>()</div>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html" title="class or interface in java.lang" class="external-link">Thread</a></span>&nbsp;<span class="member-name">getExecutionThread</span>()</div>
 </section>
 </li>
 <li>
@@ -305,36 +305,35 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.lang.String</span>&nbsp;<span class="member-name">getName</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="member-name">getName</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ITaskExecutor.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;<a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a> extends java.lang.Runnable&gt;</code></dd>
+<dd><code><a href="ITaskExecutor.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;<a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyAsync(java.util.function.Supplier)">
 <h3>supplyAsync</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>
-<span class="return-type">java.util.concurrent.CompletableFuture&lt;V&gt;</span>&nbsp;<span class="member-name">supplyAsync</span>&#8203;(<span class="parameters">java.util.function.Supplier&lt;V&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;V&gt;</span>&nbsp;<span class="member-name">supplyAsync</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;V&gt;&nbsp;supplier)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="deferTask(java.lang.Runnable)">
 <h3>deferTask</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</span>&nbsp;<span class="member-name">deferTask</span>&#8203;(<span class="parameters">java.lang.Runnable&nbsp;taskIn)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</span>&nbsp;<span class="member-name">deferTask</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="runAsync(java.lang.Runnable)">
 <h3>runAsync</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">java.util.concurrent.CompletableFuture&lt;java.lang.Void&gt;</span>&nbsp;<span class="member-name">runAsync</span>&#8203;(<span class="parameters">java.lang.Runnable&nbsp;taskIn)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html" title="class or interface in java.lang" class="external-link">Void</a>&gt;</span>&nbsp;<span class="member-name">runAsync</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="runImmediately(java.lang.Runnable)">
 <h3>runImmediately</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">runImmediately</span>&#8203;(<span class="parameters">java.lang.Runnable&nbsp;taskIn)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">runImmediately</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;taskIn)</span></div>
 </section>
 </li>
 <li>
@@ -343,17 +342,17 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">enqueue</span>&#8203;(<span class="parameters"><a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a>&nbsp;taskIn)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ITaskExecutor.html#enqueue(Msg)">enqueue</a></code>&nbsp;in interface&nbsp;<code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;<a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a> extends java.lang.Runnable&gt;</code></dd>
+<dd><code><a href="ITaskExecutor.html#enqueue(Msg)">enqueue</a></code>&nbsp;in interface&nbsp;<code><a href="ITaskExecutor.html" title="interface in net.minecraft.util.concurrent">ITaskExecutor</a>&lt;<a href="ThreadTaskExecutor.html" title="type parameter in ThreadTaskExecutor">R</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="execute(java.lang.Runnable)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">execute</span>&#8203;(<span class="parameters">java.lang.Runnable&nbsp;p_execute_1_)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">execute</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a>&nbsp;p_execute_1_)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code>execute</code>&nbsp;in interface&nbsp;<code>java.util.concurrent.Executor</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html#execute(java.lang.Runnable)" title="class or interface in java.util.concurrent" class="external-link">execute</a></code>&nbsp;in interface&nbsp;<code><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html" title="class or interface in java.util.concurrent" class="external-link">Executor</a></code></dd>
 </dl>
 </section>
 </li>
@@ -378,7 +377,7 @@ implements <a href="ITaskExecutor.html" title="interface in net.minecraft.util.c
 <li>
 <section class="detail" id="driveUntil(java.util.function.BooleanSupplier)">
 <h3>driveUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">driveUntil</span>&#8203;(<span class="parameters">java.util.function.BooleanSupplier&nbsp;isDone)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="member-name">driveUntil</span>&#8203;(<span class="parameters"><a href="http://docs.oracle.com/javase/8/docs/api/java/util/function/BooleanSupplier.html" title="class or interface in java.util.function" class="external-link">BooleanSupplier</a>&nbsp;isDone)</span></div>
 </section>
 </li>
 <li>
