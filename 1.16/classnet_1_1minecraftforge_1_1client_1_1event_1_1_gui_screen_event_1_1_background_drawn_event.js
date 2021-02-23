@@ -1,4 +1,0 @@
-var classnet_1_1minecraftforge_1_1client_1_1event_1_1_gui_screen_event_1_1_background_drawn_event =
-[
-    [ "getMatrixStack", "classnet_1_1minecraftforge_1_1client_1_1event_1_1_gui_screen_event_1_1_background_drawn_event.html#a4d5e5dd0d1ee9d0bbdc9a36c2254fa1d", null ]
-];
