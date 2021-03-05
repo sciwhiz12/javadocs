@@ -39,7 +39,7 @@ class InfoUtils {
 
             if (!javadoc.getDescription().isEmpty()) {
                 gen.writeArrayFieldStart("description");
-                for (String line : javadoc.getDescription().toText().split("\n")) {
+                for (String line : javadoc.getDescription().toText().split("\r?\n")) {
                     gen.writeString(line);
                 }
                 gen.writeEndArray();
@@ -56,7 +56,7 @@ class InfoUtils {
                         gen.writeStringField(tag.getTagName(), content);
                     } else {
                         gen.writeArrayFieldStart(tag.getTagName());
-                        for (String line : content.split("\n")) {
+                        for (String line : content.split("\r?\n")) {
                             gen.writeString(line);
                         }
                         gen.writeEndArray();
@@ -78,7 +78,7 @@ class InfoUtils {
             if (javadocNode.has("description")) {
                 StringBuilder builder = new StringBuilder();
                 for (JsonNode element : javadocNode.get("description")) {
-                    if (builder.length() != 0) builder.append('\n');
+                    if (builder.length() != 0) builder.append(LineSeparator.SYSTEM.asRawString());
                     builder.append(element.asText());
                 }
                 javadoc = new Javadoc(JavadocDescription.parseText(builder.toString()));
@@ -92,7 +92,7 @@ class InfoUtils {
                     if (entry.getValue().isArray()) {
                         StringBuilder builder = new StringBuilder();
                         for (JsonNode element : entry.getValue()) {
-                            if (builder.length() != 0) builder.append('\n');
+                            if (builder.length() != 0) builder.append(LineSeparator.SYSTEM.asRawString());
                             builder.append(element.asText());
                         }
                         javadoc.addBlockTag(entry.getKey(), builder.toString());
