@@ -70,7 +70,7 @@ public class MakeDocs extends DefaultTask {
             .setAttributeComments(true);
         sourceRoot.setPrinter(ParserUtils.PRINTER::print);
 
-        sourceRoot.parseParallelized((local, absolute, result) -> {
+        sourceRoot.parse("", (local, absolute, result) -> {
             final CompilationUnit cu = result.getResult().orElseThrow(() -> new IllegalStateException(
                 "Compilation error for file " + local + " under " + docsRoot + ": " + result.getProblems()));
 
