@@ -60,9 +60,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Adds a sprite to be stitched into the texture atlas.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html#addWidget(net.minecraft.client.gui.widget.Widget)">addWidget(Widget)</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent</a></dt>
+<dd>
+<div class="block">Adds the given <code>Widget</code> to the screen.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.BackgroundDrawnEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,com.mojang.blaze3d.matrix.MatrixStack)">BackgroundDrawnEvent(Screen, MatrixStack)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.BackgroundDrawnEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.BackgroundDrawnEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/ColorHandlerEvent.Block.html#%3Cinit%3E(net.minecraft.client.renderer.color.BlockColors)">Block(BlockColors)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/ColorHandlerEvent.Block.html" title="class in net.minecraftforge.client.event">ColorHandlerEvent.Block</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderBlockOverlayEvent.OverlayType.html#BLOCK">BLOCK</a></span> - net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderBlockOverlayEvent.OverlayType.html" title="enum in net.minecraftforge.client.event">RenderBlockOverlayEvent.OverlayType</a></dt>
@@ -143,6 +149,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Fired before a block's selection highlight is rendered.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,com.mojang.blaze3d.matrix.MatrixStack,int,int,float)">DrawScreenEvent(Screen, MatrixStack, int, int, float)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
 <dl class="index">
@@ -230,6 +238,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the <code>IRenderTypeBuffer</code> currently being used for rendering.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.html#getButton()">getButton()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent</a></dt>
+<dd>
+<div class="block">Returns the GLFW key code of the clicked mouse button.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.html#getButton()">getButton()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent</a></dt>
+<dd>
+<div class="block">Returns the GLFW key code of the released mouse button.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.MouseInputEvent.html#getButton()">getButton()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">InputEvent.MouseInputEvent</a></dt>
 <dd>
 <div class="block">Returns the GLFW key code of the mouse button which triggered this event.</div>
@@ -237,6 +253,10 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.RawMouseEvent.html#getButton()">getButton()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.RawMouseEvent.html" title="class in net.minecraftforge.client.event">InputEvent.RawMouseEvent</a></dt>
 <dd>
 <div class="block">Returns the GLFW key code of the clicked mouse button.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html#getCodePoint()">getCodePoint()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent</a></dt>
+<dd>
+<div class="block">Returns the code point of the typed character, stored as a <code>char</code> type.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderNameplateEvent.html#getContent()">getContent()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderNameplateEvent.html" title="class in net.minecraftforge.client.event">RenderNameplateEvent</a></dt>
 <dd>
@@ -253,6 +273,14 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/ClientPlayerNetworkEvent.html#getController()">getController()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/ClientPlayerNetworkEvent.html" title="class in net.minecraftforge.client.event">ClientPlayerNetworkEvent</a></dt>
 <dd>
 <div class="block">Returns the <code>PlayerController</code> of the client player, or <code>null</code> if it does not exist.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html#getDragX()">getDragX()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent</a></dt>
+<dd>
+<div class="block">Returns the he amount of offset between the new position against the old position of the mouse along the X (horizontal) axis.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html#getDragY()">getDragY()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent</a></dt>
+<dd>
+<div class="block">Returns the amount of offset between the new position against the old position of the mouse along the Y (vertical) axis.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/FOVUpdateEvent.html#getEntity()">getEntity()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/FOVUpdateEvent.html" title="class in net.minecraftforge.client.event">FOVUpdateEvent</a></dt>
 <dd>
@@ -293,6 +321,10 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiOpenEvent.html#getGui()">getGui()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiOpenEvent.html" title="class in net.minecraftforge.client.event">GuiOpenEvent</a></dt>
 <dd>
 <div class="block">Returns the screen that will be opened, after the event fires and is not cancelled.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.html#getGui()">getGui()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent</a></dt>
+<dd>
+<div class="block">Returns the <code>Screen</code> of this event.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiContainerEvent.html#getGuiContainer()">getGuiContainer()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiContainerEvent.html" title="class in net.minecraftforge.client.event">GuiContainerEvent</a></dt>
 <dd>
@@ -338,6 +370,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the <code>KeyBinding</code> that triggered this event.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html#getKeyCode()">getKeyCode()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyEvent</a></dt>
+<dd>
+<div class="block">Returns the GLFW (platform-agnostic) key code of the keyboard key.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderHandEvent.html#getLight()">getLight()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderHandEvent.html" title="class in net.minecraftforge.client.event">RenderHandEvent</a></dt>
 <dd>
 <div class="block">Returns an integer packed with the sky and block light.</div>
@@ -375,6 +411,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the <code>MatrixStack</code> used for transformations, rotations, and scaling in rendering.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html#getMatrixStack()">getMatrixStack()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html" title="class in net.minecraftforge.client.event">GuiContainerEvent.DrawForeground</a></dt>
+<dd>
+<div class="block">Returns the <code>MatrixStack</code> used for transformations, rotations, and scaling in rendering.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.BackgroundDrawnEvent.html#getMatrixStack()">getMatrixStack()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.BackgroundDrawnEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.BackgroundDrawnEvent</a></dt>
+<dd>
+<div class="block">Returns the <code>MatrixStack</code> used for transformations, rotations, and scaling in rendering.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html#getMatrixStack()">getMatrixStack()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></dt>
 <dd>
 <div class="block">Returns the <code>MatrixStack</code> used for transformations, rotations, and scaling in rendering.</div>
 </dd>
@@ -430,6 +474,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a modifiable map of <code>ResourceLocations</code> and their corresponding models.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html#getModifiers()">getModifiers()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent</a></dt>
+<dd>
+<div class="block">Returns a bit field number representing the currently active modifier keys.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html#getModifiers()">getModifiers()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyEvent</a></dt>
+<dd>
+<div class="block">Returns a bit field number representing the currently active modifier keys.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html#getModifiers()">getModifiers()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html" title="class in net.minecraftforge.client.event">InputEvent.KeyInputEvent</a></dt>
 <dd>
 <div class="block">Returns a bit field number representing the currently active modifier keys.</div>
@@ -442,11 +494,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a bit field number representing the currently active modifier keys.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html#getMouseButton()">getMouseButton()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent</a></dt>
+<dd>
+<div class="block">Returns the GLFW key code of the dragged mouse button.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiContainerEvent.DrawBackground.html#getMouseX()">getMouseX()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiContainerEvent.DrawBackground.html" title="class in net.minecraftforge.client.event">GuiContainerEvent.DrawBackground</a></dt>
 <dd>
 <div class="block">Returns the X coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html#getMouseX()">getMouseX()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html" title="class in net.minecraftforge.client.event">GuiContainerEvent.DrawForeground</a></dt>
+<dd>
+<div class="block">Returns the X coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html#getMouseX()">getMouseX()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></dt>
+<dd>
+<div class="block">Returns the X coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html#getMouseX()">getMouseX()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseInputEvent</a></dt>
 <dd>
 <div class="block">Returns the X coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
 </dd>
@@ -462,6 +526,14 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html#getMouseY()">getMouseY()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiContainerEvent.DrawForeground.html" title="class in net.minecraftforge.client.event">GuiContainerEvent.DrawForeground</a></dt>
 <dd>
 <div class="block">Returns the Y coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html#getMouseY()">getMouseY()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></dt>
+<dd>
+<div class="block">Returns the Y coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html#getMouseY()">getMouseY()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseInputEvent</a></dt>
+<dd>
+<div class="block">Returns the X coordinate of the mouse pointer, relative to the <code>main window</code> of the game.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html#getMouseY()">getMouseY()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">InputEvent.MouseScrollEvent</a></dt>
 <dd>
@@ -572,9 +644,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the <code>PlayerRenderer</code> for the player entity.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html#getRenderPartialTicks()">getRenderPartialTicks()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></dt>
+<dd>
+<div class="block">Returns the partial amount of ticks between the last and next render tick.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderNameplateEvent.html#getRenderTypeBuffer()">getRenderTypeBuffer()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderNameplateEvent.html" title="class in net.minecraftforge.client.event">RenderNameplateEvent</a></dt>
 <dd>
 <div class="block">Returns the <code>IRenderTypeBuffer</code> currently being used for rendering.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html#getScanCode()">getScanCode()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyEvent</a></dt>
+<dd>
+<div class="block">Returns the platform-specific scan code of the keyboard key.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html#getScanCode()">getScanCode()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html" title="class in net.minecraftforge.client.event">InputEvent.KeyInputEvent</a></dt>
 <dd>
@@ -587,6 +667,10 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderTooltipEvent.Pre.html#getScreenWidth()">getScreenWidth()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderTooltipEvent.Pre.html" title="class in net.minecraftforge.client.event">RenderTooltipEvent.Pre</a></dt>
 <dd>
 <div class="block">Returns the perceived width of the screen.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.html#getScrollDelta()">getScrollDelta()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent</a></dt>
+<dd>
+<div class="block">Returns the amount of change or <em>delta</em> of the mouse scroll wheel.</div>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html#getScrollDelta()">getScrollDelta()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">InputEvent.MouseScrollEvent</a></dt>
 <dd>
@@ -638,6 +722,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the current implementation version of Minecraft Forge.</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html#getWidgetList()">getWidgetList()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent</a></dt>
+<dd>
+<div class="block">Returns an unmodifiable view of the list of <code>Widgets</code> on the screen.</div>
+</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderTooltipEvent.Post.html#getWidth()">getWidth()</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderTooltipEvent.Post.html" title="class in net.minecraftforge.client.event">RenderTooltipEvent.Post</a></dt>
 <dd>
 <div class="block">Returns the width of the inner tooltip box, which does not include the border's width.</div>
@@ -671,6 +759,143 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiOpenEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen)">GuiOpenEvent(Screen)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiOpenEvent.html" title="class in net.minecraftforge.client.event">GuiOpenEvent</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired on different events/actions when a <code>Screen</code> is active and visible.</div>
+</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen)">GuiScreenEvent(Screen)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.BackgroundDrawnEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.BackgroundDrawnEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired directly after the background of the <code>Screen</code> is drawn.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.DrawScreenEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a <code>Screen</code> is being drawn.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.DrawScreenEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the <code>Screen</code> is drawn.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.DrawScreenEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the <code>Screen</code> is drawn.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.InitGuiEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a <code>Screen</code> is being initialized.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.InitGuiEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the screen's overridable initialization method is called.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.InitGuiEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the screen's overridable initialization method is fired.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardCharTypedEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a keyboard key corresponding to a character is typed.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardCharTypedEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the character input is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardCharTypedEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardCharTypedEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the character input is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired whenever a keyboard key is pressed or released.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyPressedEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a keyboard key is pressed.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyPressedEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the key press is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardKeyPressedEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyPressedEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the key press is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyReleasedEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a keyboard key is released.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyReleasedEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the key release is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardKeyReleasedEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.KeyboardKeyReleasedEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the key release is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseClickedEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a mouse button is clicked.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseClickedEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the mouse click is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseClickedEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseClickedEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the mouse click is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseDragEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when the mouse was dragged while a button is being held down.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseDragEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the mouse drag is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseDragEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseDragEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the mouse drag is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseInputEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired whenever an action is performed by the mouse.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseReleasedEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when a mouse button is released.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseReleasedEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the mouse release is handled, if not handled by the screen
+ and the corresponding \ref MouseReleasedEvent.Pre is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseReleasedEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the mouse release is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseScrollEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when the mouse was dragged while a button is being held down.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Post.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseScrollEvent.Post</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>after</b> the mouse scroll is handled, if not handled by the screen
+ and the corresponding <a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseScrollEvent.Pre</code></a> is not cancelled.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Pre.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.MouseScrollEvent.Pre</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired <b>before</b> the mouse scroll is handled by the screen.</div>
+</dd>
+<dt><a href="net/minecraftforge/client/event/GuiScreenEvent.PotionShiftEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">GuiScreenEvent.PotionShiftEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
+<dd>
+<div class="block">Fired when there are potion effects to be rendered and the <code>Screen</code> is being shifted.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
@@ -685,6 +910,8 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:I">I</h2>
 <dl class="index">
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,java.util.List,java.util.function.Consumer,java.util.function.Consumer)">InitGuiEvent(Screen, List&lt;Widget&gt;, Consumer&lt;Widget&gt;, Consumer&lt;Widget&gt;)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="net/minecraftforge/client/event/InputEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">InputEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
 <dd>
 <div class="block">Fired when an input is detected from the user's input devices.</div>
@@ -759,6 +986,14 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:K">K</h2>
 <dl class="index">
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,char,int)">KeyboardCharTypedEvent(Screen, char, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">KeyboardKeyEvent(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">KeyboardKeyPressedEvent(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">KeyboardKeyReleasedEvent(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html#%3Cinit%3E(int,int,int,int)">KeyInputEvent(int, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.KeyInputEvent.html" title="class in net.minecraftforge.client.event">InputEvent.KeyInputEvent</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -789,9 +1024,19 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/ModelRegistryEvent.html#%3Cinit%3E()">ModelRegistryEvent()</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/ModelRegistryEvent.html" title="class in net.minecraftforge.client.event">ModelRegistryEvent</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">MouseClickedEvent(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int,double,double)">MouseDragEvent(Screen, double, double, int, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.MouseInputEvent.html#%3Cinit%3E(int,int,int)">MouseInputEvent(int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">InputEvent.MouseInputEvent</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double)">MouseInputEvent(Screen, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseInputEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">MouseReleasedEvent(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html#%3Cinit%3E(double,boolean,boolean,boolean,double,double)">MouseScrollEvent(double, boolean, boolean, boolean, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/InputEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">InputEvent.MouseScrollEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,double)">MouseScrollEvent(Screen, double, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:N">N</h2>
@@ -824,6 +1069,24 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Play the taming effect, will either be hearts or smoke depending on status</div>
 </dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,char,int)">Post(Screen, char, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,double)">Post(Screen, double, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">Post(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">Post(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int,double,double)">Post(Screen, double, double, int, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">Post(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">Post(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,com.mojang.blaze3d.matrix.MatrixStack,int,int,float)">Post(Screen, MatrixStack, int, int, float)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent.Post</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Post.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,java.util.List,java.util.function.Consumer,java.util.function.Consumer)">Post(Screen, List&lt;Widget&gt;, Consumer&lt;Widget&gt;, Consumer&lt;Widget&gt;)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent.Post</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/TextureStitchEvent.Post.html#%3Cinit%3E(net.minecraft.client.renderer.texture.AtlasTexture)">Post(AtlasTexture)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/TextureStitchEvent.Post.html" title="class in net.minecraftforge.client.event">TextureStitchEvent.Post</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderLivingEvent.Post.html#%3Cinit%3E(net.minecraft.entity.LivingEntity,net.minecraft.client.renderer.entity.LivingRenderer,float,com.mojang.blaze3d.matrix.MatrixStack,net.minecraft.client.renderer.IRenderTypeBuffer,int)">Post(LivingEntity, LivingRenderer&lt;T, M&gt;, float, MatrixStack, IRenderTypeBuffer, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderLivingEvent.Post.html" title="class in net.minecraftforge.client.event">RenderLivingEvent.Post</a></dt>
@@ -835,6 +1098,26 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderTooltipEvent.PostBackground.html#%3Cinit%3E(net.minecraft.item.ItemStack,java.util.List,com.mojang.blaze3d.matrix.MatrixStack,int,int,net.minecraft.client.gui.FontRenderer,int,int)">PostBackground(ItemStack, List&lt;? extends ITextProperties&gt;, MatrixStack, int, int, FontRenderer, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderTooltipEvent.PostBackground.html" title="class in net.minecraftforge.client.event">RenderTooltipEvent.PostBackground</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/RenderTooltipEvent.PostText.html#%3Cinit%3E(net.minecraft.item.ItemStack,java.util.List,com.mojang.blaze3d.matrix.MatrixStack,int,int,net.minecraft.client.gui.FontRenderer,int,int)">PostText(ItemStack, List&lt;? extends ITextProperties&gt;, MatrixStack, int, int, FontRenderer, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/RenderTooltipEvent.PostText.html" title="class in net.minecraftforge.client.event">RenderTooltipEvent.PostText</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.PotionShiftEvent.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen)">PotionShiftEvent(Screen)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.PotionShiftEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.PotionShiftEvent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,char,int)">Pre(Screen, char, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardCharTypedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,double)">Pre(Screen, double, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseScrollEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">Pre(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseClickedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int)">Pre(Screen, double, double, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,double,double,int,double,double)">Pre(Screen, double, double, int, double, double)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.MouseDragEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">Pre(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,int,int,int)">Pre(Screen, int, int, int)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,com.mojang.blaze3d.matrix.MatrixStack,int,int,float)">Pre(Screen, MatrixStack, int, int, float)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.DrawScreenEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent.Pre</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Pre.html#%3Cinit%3E(net.minecraft.client.gui.screen.Screen,java.util.List,java.util.function.Consumer,java.util.function.Consumer)">Pre(Screen, List&lt;Widget&gt;, Consumer&lt;Widget&gt;, Consumer&lt;Widget&gt;)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent.Pre</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraftforge/client/event/TextureStitchEvent.Pre.html#%3Cinit%3E(net.minecraft.client.renderer.texture.AtlasTexture,java.util.Set)">Pre(AtlasTexture, Set&lt;ResourceLocation&gt;)</a></span> - Constructor for class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/TextureStitchEvent.Pre.html" title="class in net.minecraftforge.client.event">TextureStitchEvent.Pre</a></dt>
 <dd>&nbsp;</dd>
@@ -861,6 +1144,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="net/minecraft/entity/passive/TameableEntity.html#registerData()">registerData()</a></span> - Method in class net.minecraft.entity.passive.<a href="net/minecraft/entity/passive/TameableEntity.html" title="class in net.minecraft.entity.passive">TameableEntity</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html#removeWidget(net.minecraft.client.gui.widget.Widget)">removeWidget(Widget)</a></span> - Method in class net.minecraftforge.client.event.<a href="net/minecraftforge/client/event/GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent</a></dt>
+<dd>
+<div class="block">Removes the given <code>Widget</code> from the screen.</div>
+</dd>
 <dt><a href="net/minecraftforge/client/event/RenderBlockOverlayEvent.html" title="class in net.minecraftforge.client.event"><span class="type-name-link">RenderBlockOverlayEvent</span></a> - Class in <a href="net/minecraftforge/client/event/package-summary.html">net.minecraftforge.client.event</a></dt>
 <dd>
 <div class="block">Fired before a block texture will be overlaid on the player's view.</div>

@@ -170,6 +170,205 @@ loadScripts(document, 'script');</script>
 </td>
 </tr>
 <tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent</a></th>
+<td class="col-last">
+<div class="block">Fired on different events/actions when a <code>Screen</code> is active and visible.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.BackgroundDrawnEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.BackgroundDrawnEvent</a></th>
+<td class="col-last">
+<div class="block">Fired directly after the background of the <code>Screen</code> is drawn.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.DrawScreenEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a <code>Screen</code> is being drawn.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.DrawScreenEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the <code>Screen</code> is drawn.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.DrawScreenEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.DrawScreenEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the <code>Screen</code> is drawn.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.InitGuiEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a <code>Screen</code> is being initialized.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.InitGuiEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the screen's overridable initialization method is called.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.InitGuiEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.InitGuiEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the screen's overridable initialization method is fired.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardCharTypedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a keyboard key corresponding to a character is typed.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardCharTypedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the character input is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.KeyboardCharTypedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardCharTypedEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardCharTypedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardCharTypedEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the character input is handled by the screen.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyEvent</a></th>
+<td class="col-last">
+<div class="block">Fired whenever a keyboard key is pressed or released.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyPressedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a keyboard key is pressed.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyPressedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the key press is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardKeyPressedEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyPressedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyPressedEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the key press is handled by the screen.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyReleasedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a keyboard key is released.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyReleasedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the key release is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.KeyboardKeyReleasedEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.KeyboardKeyReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.KeyboardKeyReleasedEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the key release is handled by the screen.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseClickedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a mouse button is clicked.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseClickedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the mouse click is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.MouseClickedEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseClickedEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseClickedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseClickedEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the mouse click is handled by the screen.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseDragEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when the mouse was dragged while a button is being held down.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseDragEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the mouse drag is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.MouseDragEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseDragEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseDragEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseDragEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the mouse drag is handled by the screen.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseInputEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseInputEvent</a></th>
+<td class="col-last">
+<div class="block">Fired whenever an action is performed by the mouse.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseReleasedEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when a mouse button is released.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseReleasedEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the mouse release is handled, if not handled by the screen
+ and the corresponding \ref MouseReleasedEvent.Pre is not cancelled.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseReleasedEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseReleasedEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the mouse release is handled by the screen.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseScrollEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when the mouse was dragged while a button is being held down.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseScrollEvent.Post.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent.Post</a></th>
+<td class="col-last">
+<div class="block">Fired <b>after</b> the mouse scroll is handled, if not handled by the screen
+ and the corresponding <a href="GuiScreenEvent.MouseScrollEvent.Pre.html" title="class in net.minecraftforge.client.event"><code>GuiScreenEvent.MouseScrollEvent.Pre</code></a> is not cancelled.</div>
+</td>
+</tr>
+<tr class="row-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.MouseScrollEvent.Pre.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.MouseScrollEvent.Pre</a></th>
+<td class="col-last">
+<div class="block">Fired <b>before</b> the mouse scroll is handled by the screen.</div>
+</td>
+</tr>
+<tr class="alt-color">
+<th class="col-first" scope="row"><a href="GuiScreenEvent.PotionShiftEvent.html" title="class in net.minecraftforge.client.event">GuiScreenEvent.PotionShiftEvent</a></th>
+<td class="col-last">
+<div class="block">Fired when there are potion effects to be rendered and the <code>Screen</code> is being shifted.</div>
+</td>
+</tr>
+<tr class="row-color">
 <th class="col-first" scope="row"><a href="InputEvent.html" title="class in net.minecraftforge.client.event">InputEvent</a></th>
 <td class="col-last">
 <div class="block">Fired when an input is detected from the user's input devices.</div>
