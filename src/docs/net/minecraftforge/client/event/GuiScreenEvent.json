@@ -1,0 +1,849 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired on different events/actions when a {@link Screen} is active and visible.",
+                "See the various subclasses for listening to different events.</p>",
+                "",
+                "<p>These events is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>",
+                "",
+                "<p><strong>This class is annotated with {@link OnlyIn @OnlyIn}{@code (}{@link Dist#CLIENT Dist.CLIENT}{@code )}.</strong></p>"
+            ],
+            "tags" : {
+                "see" : "GuiScreenEvent.InitGuiEvent",
+                "see" : "GuiScreenEvent.DrawScreenEvent",
+                "see" : "GuiScreenEvent.BackgroundDrawnEvent",
+                "see" : "GuiScreenEvent.PotionShiftEvent",
+                "see" : "GuiScreenEvent.MouseInputEvent",
+                "see" : "GuiScreenEvent.KeyboardKeyEvent",
+                "author" : "bspkrs"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getGui",
+                "descriptor" : "()Lnet/minecraft/client/gui/screen/Screen;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link Screen} of this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The screen"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$InitGuiEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a {@link Screen} is being initialized.",
+                "See the two subclasses for listening before and after the initialization.</p>"
+            ],
+            "tags" : {
+                "see" : "InitGuiEvent.Pre",
+                "see" : "InitGuiEvent.Post"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getWidgetList",
+                "descriptor" : "()Ljava/util/List;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an unmodifiable view of the list of {@link Widget Widgets} on the screen.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "An unmodifiable view of the list of widgets"
+                    }
+                }
+            },
+            {
+                "name" : "addWidget",
+                "descriptor" : "(Lnet/minecraft/client/gui/widget/Widget;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Adds the given {@link Widget} to the screen.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "button The widget to add"
+                    }
+                }
+            },
+            {
+                "name" : "removeWidget",
+                "descriptor" : "(Lnet/minecraft/client/gui/widget/Widget;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Removes the given {@link Widget} from the screen.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "button The widget to remove"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$InitGuiEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the screen's overridable initialization method is fired.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the initialization method will not be called, and the widgets and children",
+                "lists will not be cleared.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$InitGuiEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the screen's overridable initialization method is called.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a {@link Screen} is being drawn.",
+                "See the two subclasses for listening before and after drawing.</p>"
+            ],
+            "tags" : {
+                "see" : "DrawScreenEvent.Pre",
+                "see" : "DrawScreenEvent.Post",
+                "see" : "net.minecraftforge.client.ForgeHooksClient#drawScreen(Screen, MatrixStack, int, int, float)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseX",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X coordinate of the mouse pointer"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseY",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the Y coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y coordinate of the mouse pointer"
+                    }
+                }
+            },
+            {
+                "name" : "getRenderPartialTicks",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the partial amount of ticks between the last and next render tick.",
+                        "This will be in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial render ticks"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the {@link Screen} is drawn.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen will not be drawn.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the {@link Screen} is drawn.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$BackgroundDrawnEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired directly after the background of the {@link Screen} is drawn.",
+                "Can be used for drawing above the background but below the tooltips.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$PotionShiftEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when there are potion effects to be rendered and the {@link Screen} is being shifted.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen will be prevented from shifting.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseInputEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired whenever an action is performed by the mouse.",
+                "See the various subclasses to listen for different actions.</p>"
+            ],
+            "tags" : {
+                "see" : "GuiScreenEvent.MouseClickedEvent",
+                "see" : "GuiScreenEvent.MouseReleasedEvent",
+                "see" : "GuiScreenEvent.MouseDragEvent",
+                "see" : "GuiScreenEvent.MouseScrollEvent"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMouseX",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X position of the mouse cursor"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseY",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y position of the mouse cursor"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseClickedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a mouse button is clicked.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "MouseClickedEvent.Pre",
+                "see" : "MouseClickedEvent.Post"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getButton",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW key code of the clicked mouse button.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The key code of the clicked mouse button",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_LEFT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_RIGHT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_MIDDLE",
+                        "see" : "GLFW key constants starting with 'GLFW_MOUSE_BUTTON_'",
+                        "see" : "<a href=\"http://www.glfw.org/docs/latest/input.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseClickedEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the mouse click is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's mouse click handler will be bypassed",
+                "and the corresponding {@link MouseClickedEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseClickedPre(Screen, double, double, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseClickedEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the mouse click is handled, if not handled by the screen",
+                "and the corresponding {@link MouseClickedEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the mouse click will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseClickedPost(Screen, double, double, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseReleasedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a mouse button is released.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "MouseReleasedEvent.Pre",
+                "see" : "MouseReleasedEvent.Post"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getButton",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW key code of the released mouse button.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The key code of the released mouse button",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_LEFT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_RIGHT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_MIDDLE",
+                        "see" : "GLFW key constants starting with 'GLFW_MOUSE_BUTTON_'",
+                        "see" : "<a href=\"http://www.glfw.org/docs/latest/input.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseReleasedEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "Fired <b>before</b> the mouse release is handled by the screen.",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's mouse release handler will be bypassed",
+                "and the corresponding {@link MouseReleasedEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseReleasedPre(Screen, double, double, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseReleasedEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the mouse release is handled, if not handled by the screen",
+                "and the corresponding \\ref MouseReleasedEvent.Pre is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the mouse release will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseReleasedPost(Screen, double, double, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseDragEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the mouse was dragged while a button is being held down.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "MouseDragEvent.Pre",
+                "see" : "MouseDragEvent.Post"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMouseButton",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW key code of the dragged mouse button.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The key code of the mouse button that was dragged",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_LEFT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_RIGHT",
+                        "see" : "GLFW#GLFW_MOUSE_BUTTON_MIDDLE",
+                        "see" : "GLFW key constants starting with 'GLFW_MOUSE_BUTTON_'",
+                        "see" : "<a href=\"http://www.glfw.org/docs/latest/input.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            },
+            {
+                "name" : "getDragX",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the he amount of offset between the new position against the old position of the mouse along the X (horizontal) axis.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of mouse drag along the X axis"
+                    }
+                }
+            },
+            {
+                "name" : "getDragY",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the amount of offset between the new position against the old position of the mouse along the Y (vertical) axis.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of mouse drag along the Y axis"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseDragEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the mouse drag is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's mouse drag handler will be bypassed",
+                "and the corresponding {@link MouseDragEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseDragPre(Screen, double, double, int, double, double)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseDragEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the mouse drag is handled, if not handled by the screen",
+                "and the corresponding {@link MouseDragEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the mouse drag will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseDragPost(Screen, double, double, int, double, double)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseScrollEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the mouse was dragged while a button is being held down.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "MouseScrollEvent.Pre",
+                "see" : "MouseScrollEvent.Post"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getScrollDelta",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the amount of change or <em>delta</em> of the mouse scroll wheel.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The delta of the mouse scroll"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseScrollEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the mouse scroll is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's mouse scroll handler will be bypassed",
+                "and the corresponding {@link MouseScrollEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseScrollPre(net.minecraft.client.MouseHelper, Screen, double)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$MouseScrollEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the mouse scroll is handled, if not handled by the screen",
+                "and the corresponding {@link MouseScrollEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the mouse scroll will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiMouseScrollPost(net.minecraft.client.MouseHelper, Screen, double)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired whenever a keyboard key is pressed or released.",
+                "See the various subclasses to listen for key pressing or releasing.</p>"
+            ],
+            "tags" : {
+                "see" : "GuiScreenEvent.KeyboardKeyPressedEvent",
+                "see" : "GuiScreenEvent.KeyboardKeyReleasedEvent",
+                "see" : "InputMappings#getInputByCode(int, int)",
+                "see" : "<a href=\"https://www.glfw.org/docs/latest/input_guide.html#input_key\" target=\"_top\">the online GLFW documentation</a>"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getKeyCode",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW (platform-agnostic) key code of the keyboard key.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The GLFW (platform-agnostic) key code",
+                        "see" : "GLFW key constants starting with 'GLFW_KEY_'",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__keys.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            },
+            {
+                "name" : "getScanCode",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the platform-specific scan code of the keyboard key.</p>",
+                        "",
+                        "<p>The scan code is unique for every key, regardless of whether it has a key code.",
+                        "Scan codes are platform-specific but consistent over time, so keys will have different scan codes depending",
+                        "on the platform but they are safe to save to disk as custom key bindings.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The platform-specific scan code"
+                    }
+                }
+            },
+            {
+                "name" : "getModifiers",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns a bit field number representing the currently active modifier keys.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "A bit field representing the active modifier keys",
+                        "see" : "GLFW#GLFW_MOD_SHIFT SHIFT modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_CONTROL CTRL modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_ALT ALT modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_SUPER SUPER modifier key bit",
+                        "see" : "GLFW#GLFW_KEY_CAPS_LOCK CAPS LOCK modifier key bit",
+                        "see" : "GLFW#GLFW_KEY_NUM_LOCK NUM LOCK modifier key bit",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__mods.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyPressedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a keyboard key is pressed.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "KeyboardKeyPressedEvent.Pre",
+                "see" : "KeyboardKeyPressedEvent.Post"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyPressedEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the key press is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's key press handler will be bypassed",
+                "and the corresponding {@link KeyboardKeyPressedEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiKeyPressedPre(Screen, int, int, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyPressedEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the key press is handled, if not handled by the screen",
+                "and the corresponding {@link KeyboardKeyPressedEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the key press will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiKeyPressedPost(Screen, int, int, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyReleasedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a keyboard key is released.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "KeyboardKeyReleasedEvent.Pre",
+                "see" : "KeyboardKeyReleasedEvent.Post"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyReleasedEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the key release is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's key release handler will be bypassed",
+                "and the corresponding \\ref KeyboardKeyReleasedEvent.Post will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiKeyPressedPost(Screen, int, int, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardKeyReleasedEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the key release is handled, if not handled by the screen",
+                "and the corresponding {@link KeyboardKeyReleasedEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the key release will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiKeyReleasedPost(Screen, int, int, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardCharTypedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a keyboard key corresponding to a character is typed.",
+                "See the two subclasses for listening before and after the normal handling.</p>"
+            ],
+            "tags" : {
+                "see" : "KeyboardCharTypedEvent.Pre",
+                "see" : "KeyboardCharTypedEvent.Post",
+                "see" : "<a href=\"https://www.glfw.org/docs/latest/input_guide.html#input_char\" target=\"_top\">the online GLFW documentation</a>"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getCodePoint",
+                "descriptor" : "()C",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the code point of the typed character, stored as a {@code char} type.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The character code point"
+                    }
+                }
+            },
+            {
+                "name" : "getModifiers",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns a bit field number representing the currently active modifier keys.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "A bit field representing the active modifier keys",
+                        "see" : "GLFW#GLFW_MOD_SHIFT SHIFT modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_CONTROL CTRL modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_ALT ALT modifier key bit",
+                        "see" : "GLFW#GLFW_MOD_SUPER SUPER modifier key bit",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__mods.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardCharTypedEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the character input is handled by the screen.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the screen's character input handler will be bypassed",
+                "and the corresponding {@link KeyboardCharTypedEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiCharTypedPre(Screen, char, int)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiScreenEvent$KeyboardCharTypedEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the character input is handled, if not handled by the screen",
+                "and the corresponding {@link KeyboardCharTypedEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the character input will be set as handled.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onGuiCharTypedPost(Screen, char, int)"
+            }
+        }
+    }
+]
