@@ -1,1 +1,3 @@
+net.minecraft.entity.passive
+net.minecraftforge.client.event
 net.minecraftforge.versions.forge
