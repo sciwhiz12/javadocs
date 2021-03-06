@@ -1,0 +1,98 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ColorHandlerEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired for registering block and item color handlers at the appropriate time.",
+                "See the two subclasses for registering blocks or items color handlers.</p>"
+            ],
+            "tags" : {
+                "see" : "ColorHandlerEvent.Item"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.ColorHandlerEvent$Block",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired for registering block colors handlers.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onBlockColorsInit(BlockColors)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getBlockColors",
+                "descriptor" : "()Lnet/minecraft/client/renderer/color/BlockColors;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an instance of {@link BlockColors}, for registering block color providers.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "an instance of the block colors",
+                        "see" : "BlockColors#register(net.minecraft.client.renderer.color.IBlockColor, net.minecraft.block.Block...)"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.ColorHandlerEvent$Item",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired for registering item colors handlers.</p>",
+                "",
+                "<p>The block colors should only be used for referencing or delegating item colors to their respective block colors.",
+                "Use {@link ColorHandlerEvent.Block} for registering your block color handlers.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onItemColorsInit(ItemColors, BlockColors)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getItemColors",
+                "descriptor" : "()Lnet/minecraft/client/renderer/color/ItemColors;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an instance of {@link ItemColors}, for registering item color providers.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "an instance of the item colors",
+                        "see" : "ItemColors#register(net.minecraft.client.renderer.color.IItemColor, net.minecraft.util.IItemProvider...)"
+                    }
+                }
+            },
+            {
+                "name" : "getBlockColors",
+                "descriptor" : "()Lnet/minecraft/client/renderer/color/BlockColors;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an instance of {@link BlockColors}, for reference and/or delegation to block color providers.</p>",
+                        "",
+                        "This should only be used for reference or delegation to respective block colors.",
+                        "Use {@link ColorHandlerEvent.Block} for registering your block color handlers."
+                    ],
+                    "tags" : {
+                        "return" : "an instance of the block colors"
+                    }
+                }
+            }
+        ]
+    }
+]

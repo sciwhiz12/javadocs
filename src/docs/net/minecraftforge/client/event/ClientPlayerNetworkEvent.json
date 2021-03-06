@@ -1,0 +1,141 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ClientPlayerNetworkEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired on the client for different connectivity events.",
+                "See the various subclasses to listen for specific events.</p>"
+            ],
+            "tags" : {
+                "see" : "ClientPlayerNetworkEvent.RespawnEvent"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getController",
+                "descriptor" : "()Lnet/minecraft/client/multiplayer/PlayerController;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link PlayerController} of the client player, or {@code null} if it does not exist.</p>",
+                        "",
+                        "<p>If {@link ClientPlayerNetworkEvent#getPlayer()} returns {@code null}, then this method also returns {@code null}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The client-side player controller, may be {@code null}"
+                    }
+                }
+            },
+            {
+                "name" : "getPlayer",
+                "descriptor" : "()Lnet/minecraft/client/entity/player/ClientPlayerEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the client-side player instance, or {@code null} if it does not exist.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The client player instance, may be {@code null}"
+                    }
+                }
+            },
+            {
+                "name" : "getNetworkManager",
+                "descriptor" : "()Lnet/minecraft/network/NetworkManager;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the client-side network connection manager, or {@code null} if it does not exist.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The network connection manager, may be {@code null}"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggedInEvent",
+        "javadoc" : {
+            "description" : [
+                "Fired when the client player logs in to the server.",
+                "When this event is fired, the player should be initialized at that point in time.",
+                "",
+                "{@link ClientPlayerNetworkEvent#getController()}, {@link ClientPlayerNetworkEvent#getPlayer()},",
+                "and {@link ClientPlayerNetworkEvent#getNetworkManager()} are guaranteed to never return {@code null} in this event.",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.fml.client.ClientHooks#firePlayerLogin(PlayerController, ClientPlayerEntity, NetworkManager)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggedOutEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the player logs out.",
+                "This event may also fire when a new integrated server is being created.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.fml.client.ClientHooks#firePlayerLogout(PlayerController, ClientPlayerEntity)"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.ClientPlayerNetworkEvent$RespawnEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the player object respawns, such as dimension changes.</p>",
+                "",
+                "<p>{@link ClientPlayerNetworkEvent.RespawnEvent#getNewPlayer()} returns the same player instance as",
+                "{@link ClientPlayerNetworkEvent#getPlayer()}. {@link ClientPlayerNetworkEvent#getController()},",
+                "{@link ClientPlayerNetworkEvent#getPlayer()}, and {@link ClientPlayerNetworkEvent#getNetworkManager()}",
+                "are guaranteed to never return {@code null} in this event.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.fml.client.ClientHooks#firePlayerRespawn(PlayerController, ClientPlayerEntity, ClientPlayerEntity, NetworkManager)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getOldPlayer",
+                "descriptor" : "()Lnet/minecraft/client/entity/player/ClientPlayerEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the old {@link ClientPlayerEntity} instance that existed before the respawn.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The previous player instance"
+                    }
+                }
+            },
+            {
+                "name" : "getNewPlayer",
+                "descriptor" : "()Lnet/minecraft/client/entity/player/ClientPlayerEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the new {@link ClientPlayerEntity} instance that will replace the old instance, after the respawn event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The newly created player instance"
+                    }
+                }
+            }
+        ]
+    }
+]

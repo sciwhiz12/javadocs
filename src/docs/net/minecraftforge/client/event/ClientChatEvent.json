@@ -1,0 +1,65 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ClientChatEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the client is about to send a chat message or command to the server.",
+                "This can be used to intercept chat messages to be modified or prevented from being sent to the server.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the chat message or command will not be sent to the server.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.event.ForgeEventFactory#onClientSendMessage(String)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMessage",
+                "descriptor" : "()Ljava/lang/String;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the message that will be sent to the server, if the event is not cancelled.",
+                        "If the message is blank, then no message will be sent to the server.</p>",
+                        "",
+                        "<p>The default value is the value of {@link ClientChatEvent#getOriginalMessage()}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The message that will be sent to the server"
+                    }
+                }
+            },
+            {
+                "name" : "setMessage",
+                "descriptor" : "(Ljava/lang/String;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new message to be sent to the server, if the event is not cancelled.</p>",
+                        "",
+                        "<p>If {@code message} is {@code null}, then it will be converted to an empty string.",
+                        "If {@code message} is empty, then no message will be sent to the server.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "message The new message to be sent, can be {@code null}"
+                    }
+                }
+            },
+            {
+                "name" : "getOriginalMessage",
+                "descriptor" : "()Ljava/lang/String;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original message of the event, before any modifications.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The original message of the event"
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderPlayerEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a player is being rendered.",
+                "See the two subclasses for listening for before and after rendering.</p>"
+            ],
+            "tags" : {
+                "see" : "PlayerRenderer"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getRenderer",
+                "descriptor" : "()Lnet/minecraft/client/renderer/entity/PlayerRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link PlayerRenderer} for the player entity.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The renderer for the player entity"
+                    }
+                }
+            },
+            {
+                "name" : "getPartialRenderTick",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the partial amount of ticks between the last and next render tick.",
+                        "This will be in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial ticks"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getBuffers",
+                "descriptor" : "()Lnet/minecraft/client/renderer/IRenderTypeBuffer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link IRenderTypeBuffer} currently being used for rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The rendering buffers"
+                    }
+                }
+            },
+            {
+                "name" : "getLight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an integer packed with the sky and block light.",
+                        "This is used in rendering to determine the color of the light level of the block, according to the light texture.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of packed light for rendering",
+                        "see" : "net.minecraft.client.renderer.LightTexture#getLightSky(int)"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderPlayerEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the player is rendered.",
+                "This can be used for rendering additional effects or suppressing rendering.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the player will not be rendered and the corresponding",
+                "{@link RenderPlayerEvent.Post} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderPlayerEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the player is rendered, if the corresponding {@link RenderPlayerEvent.Pre} is not cancelled.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ParticleFactoryRegisterEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired for registering particle factories at the appropriate time.</p>",
+                "",
+                "<p>{@link net.minecraft.particles.ParticleType ParticleTypes} must be registered during the",
+                "{@link net.minecraftforge.event.RegistryEvent.Register appropriate registry event}; this event is only",
+                "for the {@link net.minecraft.client.particle.IParticleFactory}s.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraft.client.particle.ParticleManager#registerFactory(net.minecraft.particles.ParticleType, net.minecraft.client.particle.IParticleFactory)"
+            }
+        }
+    }
+]

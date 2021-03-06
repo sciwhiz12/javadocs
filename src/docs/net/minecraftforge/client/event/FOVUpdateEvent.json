@@ -1,0 +1,71 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.FOVUpdateEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired after the FOV (field of vision) modifier for the player is calculated.",
+                "This can be used to modify the FOV before the e.g. FOV settings are applied.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "EntityViewRenderEvent.FOVModifier",
+                "author" : "MachineMuse"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getEntity",
+                "descriptor" : "()Lnet/minecraft/entity/player/PlayerEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link PlayerEntity} affected by this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the player entity"
+                    }
+                }
+            },
+            {
+                "name" : "getFov",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original, unmodified FOV (field of vision) of the player.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the original FOV of the player"
+                    }
+                }
+            },
+            {
+                "name" : "getNewfov",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the current FOV (field of vision) that will be applied to the player.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the current FOV of the player"
+                    }
+                }
+            },
+            {
+                "name" : "setNewfov",
+                "descriptor" : "(F)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new FOV (field of vision) that will be applied to the player.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "newfov the new FOV (field of vision)"
+                    }
+                }
+            }
+        ]
+    }
+]

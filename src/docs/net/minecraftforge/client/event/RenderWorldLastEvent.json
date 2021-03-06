@@ -1,0 +1,92 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderWorldLastEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired after world rendering is finished.",
+                "This can be used for custom rendering outside of e.g. a tile entity or entity renderer.</p>",
+                "",
+                "<p>Rendering in this event occurs after all world rendering (after the render buffers are flushed);",
+                "interactions with translucent rendering and other special effects may have unavoidable side-effects.</p>",
+                "",
+                "<p>An instance of {@link net.minecraft.client.renderer.IRenderTypeBuffer} can be retrieved from",
+                "{@link net.minecraft.client.renderer.RenderTypeBuffers}#getBufferSource(). The caller is responsible for flushing the",
+                "buffers after use, through {@link net.minecraft.client.renderer.IRenderTypeBuffer.Impl#finish()}.",
+                "<em>Not flushing the buffers will cause rendering issues.</em></p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "WorldRenderer"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getContext",
+                "descriptor" : "()Lnet/minecraft/client/renderer/WorldRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the {@link WorldRenderer}."
+                    ],
+                    "tags" : {
+                        "return" : "The world renderer"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering."
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getPartialTicks",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the partial amount of ticks between the last and next render tick.",
+                        "This will be in the range of {@code 0.0F} to {@code 1.0F}."
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial ticks"
+                    }
+                }
+            },
+            {
+                "name" : "getProjectionMatrix",
+                "descriptor" : "()Lnet/minecraft/util/math/vector/Matrix4f;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the projection matrix."
+                    ],
+                    "tags" : {
+                        "return" : "The projection matrix"
+                    }
+                }
+            },
+            {
+                "name" : "getFinishTimeNano",
+                "descriptor" : "()L",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the time when rendering started, expressed in nanoseconds."
+                    ],
+                    "tags" : {
+                        "return" : "The time when rendering started, in nanoseconds",
+                        "see" : "net.minecraft.util.Util#nanoTime()"
+                    }
+                }
+            }
+        ]
+    }
+]

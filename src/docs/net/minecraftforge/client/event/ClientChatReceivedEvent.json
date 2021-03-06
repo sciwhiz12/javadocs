@@ -1,0 +1,74 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ClientChatReceivedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the client has received a chat message or command to the server.",
+                "This can be used to modify or prevent messages from being displayed to the player.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, the chat message or command will not displayed to the player.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.event.ForgeEventFactory#onClientChat(ChatType, ITextComponent, UUID)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMessage",
+                "descriptor" : "()Lnet/minecraft/util/text/ITextComponent;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the message that will be displayed in the chat message window, if the event is not cancelled.",
+                        "If the message is blank, then no message will be displayed.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The message that will be displayed in the chat message window"
+                    }
+                }
+            },
+            {
+                "name" : "setMessage",
+                "descriptor" : "(Lnet/minecraft/util/text/ITextComponent;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new message to be displayed in the chat message window, if the event is not cancelled.</p>",
+                        "",
+                        "<p>If {@code message} is {@code null}, then no message will be displayed.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "message The new message to be displayed, can be {@code null}"
+                    }
+                }
+            },
+            {
+                "name" : "getType",
+                "descriptor" : "()Lnet/minecraft/util/text/ChatType;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the type of the message, as defined by {@link ChatType}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The type of the message"
+                    }
+                }
+            },
+            {
+                "name" : "getSenderUUID",
+                "descriptor" : "()Ljava/util/UUID;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the UUID of the sender of the message, or {@code null} if one is not specified.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The UUID of the message's sender, or {@code null}"
+                    }
+                }
+            }
+        ]
+    }
+]

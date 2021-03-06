@@ -1,0 +1,125 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderNameplateEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before an entity renderer renders the nameplate of an entity.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and does",
+                "{@linkplain HasResult have a result}.</p>",
+                "<ul>",
+                "    <li>{@link Result#ALLOW} - The nameplate will be forcibly rendered.</li>",
+                "    <li>{@link Result#DEFAULT} - The vanilla logic will be used.</li>",
+                "    <li>{@link Result#DENY} - The nameplate will not be rendered.</li>",
+                "</ul>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "EntityRenderer#render(Entity, float, float, MatrixStack, IRenderTypeBuffer, int)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "setContent",
+                "descriptor" : "(Lnet/minecraft/util/text/ITextComponent;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new text to be rendered on the nameplate.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "contents The new nameplate text"
+                    }
+                }
+            },
+            {
+                "name" : "getContent",
+                "descriptor" : "()Lnet/minecraft/util/text/ITextComponent;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the text to be rendered on the nameplate, if the event is not {@link Result#DENY DENIED}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The text of the nameplate"
+                    }
+                }
+            },
+            {
+                "name" : "getOriginalContent",
+                "descriptor" : "()Lnet/minecraft/util/text/ITextComponent;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original text of the nameplate, before any modifications by this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The original text of the nameplate"
+                    }
+                }
+            },
+            {
+                "name" : "getEntityRenderer",
+                "descriptor" : "()Lnet/minecraft/client/renderer/entity/EntityRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link EntityRenderer} for the entity that this nameplate is being rendered for.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The entity renderer rendering the nameplate"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getRenderTypeBuffer",
+                "descriptor" : "()Lnet/minecraft/client/renderer/IRenderTypeBuffer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link IRenderTypeBuffer} currently being used for rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The rendering buffers"
+                    }
+                }
+            },
+            {
+                "name" : "getPackedLight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an integer packed with the sky and block light.",
+                        "This is used in rendering to determine the color of the light level of the block, according to the light texture.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of packed light for rendering",
+                        "see" : "net.minecraft.client.renderer.LightTexture#getLightSky(int)"
+                    }
+                }
+            },
+            {
+                "name" : "getPartialTicks",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the partial amount of ticks between the last and next render tick.",
+                        "This will be in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial ticks"
+                    }
+                }
+            }
+        ]
+    }
+]

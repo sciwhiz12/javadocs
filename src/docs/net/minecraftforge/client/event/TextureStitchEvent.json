@@ -1,0 +1,79 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.TextureStitchEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the texture map is stitched together.",
+                "See the two subclasses to listen for before and after stitching.</p>"
+            ],
+            "tags" : {
+                "see" : "AtlasTexture"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMap",
+                "descriptor" : "()Lnet/minecraft/client/renderer/texture/AtlasTexture;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@linkplain AtlasTexture texture atlas} of this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The texture atlas"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.TextureStitchEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the {@link AtlasTexture} is stitched together.",
+                "This can be used to add custom sprites to be stitched into the atlas.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onTextureStitchedPre(AtlasTexture, Set)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "addSprite",
+                "descriptor" : "(Lnet/minecraft/util/ResourceLocation;)Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Adds a sprite to be stitched into the texture atlas.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "sprite the location of the sprite"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.TextureStitchEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the {@link AtlasTexture} is stitched together.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onTextureStitchedPost(AtlasTexture)"
+            }
+        }
+    }
+]

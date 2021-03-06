@@ -1,0 +1,52 @@
+[
+    {
+        "name" : "net.minecraft.entity.passive.TameableEntity",
+        "methods" : [
+            {
+                "name" : "readAdditional",
+                "descriptor" : "(Lnet/minecraft/nbt/CompoundNBT;)V",
+                "javadoc" : {
+                    "description" : [
+                        "(abstract) Protected helper method to read subclass entity data from NBT."
+                    ]
+                }
+            },
+            {
+                "name" : "playTameEffect",
+                "descriptor" : "(Z)V",
+                "javadoc" : {
+                    "description" : [
+                        "Play the taming effect, will either be hearts or smoke depending on status"
+                    ]
+                }
+            },
+            {
+                "name" : "handleStatusUpdate",
+                "descriptor" : "(B)V",
+                "javadoc" : {
+                    "description" : [
+                        "Handler for {@link World#setEntityState}"
+                    ]
+                }
+            },
+            {
+                "name" : "isOnSameTeam",
+                "descriptor" : "(Lnet/minecraft/entity/Entity;)Z",
+                "javadoc" : {
+                    "description" : [
+                        "Returns whether this Entity is on the same team as the given Entity."
+                    ]
+                }
+            },
+            {
+                "name" : "onDeath",
+                "descriptor" : "(Lnet/minecraft/util/DamageSource;)V",
+                "javadoc" : {
+                    "description" : [
+                        "Called when the mob's health reaches 0."
+                    ]
+                }
+            }
+        ]
+    }
+]

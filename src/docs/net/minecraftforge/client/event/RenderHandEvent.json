@@ -1,0 +1,147 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderHandEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before a hand is rendered in the first person view.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the hand will not be rendered.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#renderSpecificFirstPersonHand(Hand, MatrixStack, IRenderTypeBuffer, int, float, float, float, float, ItemStack)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getHand",
+                "descriptor" : "()Lnet/minecraft/util/Hand;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the hand being rendered during this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the hand being rendered"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getBuffers",
+                "descriptor" : "()Lnet/minecraft/client/renderer/IRenderTypeBuffer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link IRenderTypeBuffer} currently being used for rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the rendering buffers"
+                    }
+                }
+            },
+            {
+                "name" : "getLight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an integer packed with the sky and block light.",
+                        "This is used in rendering to determine the color of the light level of the block, according to the light texture.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of packed light for rendering",
+                        "see" : "net.minecraft.client.renderer.LightTexture#getLightSky(int)"
+                    }
+                }
+            },
+            {
+                "name" : "getPartialTicks",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the partial amount of ticks between the last and next render tick.</p>",
+                        "",
+                        "<p>This will be in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial ticks"
+                    }
+                }
+            },
+            {
+                "name" : "getInterpolatedPitch",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the interpolated rotation pitch of the player entity.</p>",
+                        "",
+                        "<p>It is the linear interpolation between the previous and current rotation pitch of the player, based on the",
+                        "{@link #getPartialTicks() partial ticks}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The interpolated pitch of the player entity"
+                    }
+                }
+            },
+            {
+                "name" : "getSwingProgress",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the progress of the swing animation of the hand.</p>",
+                        "",
+                        "<p>This is affected by certain effects, such as the Mining Fatigue or Haste effects.</p>",
+                        "",
+                        "<p>This {@code float} value is in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The swing progress of the hand being rendered",
+                        "see" : "net.minecraft.entity.LivingEntity#getSwingProgress(float)"
+                    }
+                }
+            },
+            {
+                "name" : "getEquipProgress",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the interpolated progress of the equip animation of the hand.</p>",
+                        "",
+                        "<p>It is the linear interpolation between the previous and current equip animation of the hand, based on the",
+                        "{@link #getPartialTicks() partial ticks}.</p>",
+                        "",
+                        "<p>This {@code float} value is in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The progress of the equip animation"
+                    }
+                }
+            },
+            {
+                "name" : "getItemStack",
+                "descriptor" : "()Lnet/minecraft/item/ItemStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ItemStack} currently held in this {@link #getHand() hand}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The item stack held in the hand"
+                    }
+                }
+            }
+        ]
+    }
+]

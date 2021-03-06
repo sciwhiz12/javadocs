@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RecipesUpdatedEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the {@link RecipeManager} has synced the recipes from the server to the client.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onRecipesUpdated(RecipeManager)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getRecipeManager",
+                "descriptor" : "()Lnet/minecraft/item/crafting/RecipeManager;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the currently active {@link RecipeManager}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The recipe manager"
+                    }
+                }
+            }
+        ]
+    }
+]

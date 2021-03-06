@@ -1,0 +1,137 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.GuiContainerEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired for hooking into {@link ContainerScreen} rendering.",
+                "See the two subclasses to listen for foreground or background rendering.</p>"
+            ],
+            "tags" : {
+                "see" : "GuiContainerEvent.DrawBackground"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getGuiContainer",
+                "descriptor" : "()Lnet/minecraft/client/gui/screen/inventory/ContainerScreen;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ContainerScreen} of this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The container's screen"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiContainerEvent$DrawForeground",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <em>after</em> the container screen's <b>foreground</b> layer and elements are drawn, but",
+                "before rendering the tooltips and the item stack being dragged by the player.</p>",
+                "",
+                "<p>This can be used for rendering elements that must be above other screen elements, but",
+                "below tooltips and the dragged stack, such as slot or item stack specific overlays.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseX",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X coordinate of the mouse pointer"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseY",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the Y coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y coordinate of the mouse pointer"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.GuiContainerEvent$DrawBackground",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <em>after</em> the container screen's <b>background</b> layer and elements are drawn.",
+                "This can be used for rendering new background elements.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseX",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X coordinate of the mouse pointer"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseY",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the Y coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window} of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y coordinate of the mouse pointer"
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,49 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.GuiOpenEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before any {@link Screen} will be opened, for changing it or preventing it from being opened.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the \\ref Screen shall be prevented from opening and the previous screen shall remain.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraft.client.Minecraft#displayGuiScreen(Screen)",
+                "author" : "jk-5"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getGui",
+                "descriptor" : "()Lnet/minecraft/client/gui/screen/Screen;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the screen that will be opened, after the event fires and is not cancelled.",
+                        "If this value is {@code null}, then the previous screen will be closed and no new screen shall be opened.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The screen that will be opened, may be {@code null}"
+                    }
+                }
+            },
+            {
+                "name" : "setGui",
+                "descriptor" : "(Lnet/minecraft/client/gui/screen/Screen;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new {@link Screen} to be opened, if the event is not cancelled.",
+                        "If {@code gui} is {@code null}, then the previous screen will be closed and no new screen shall be opened.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "gui The new screen to open instead, can be {@code null}"
+                    }
+                }
+            }
+        ]
+    }
+]

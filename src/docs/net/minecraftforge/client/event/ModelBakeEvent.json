@@ -1,0 +1,64 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.ModelBakeEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when the ModelManager is notified of the resource manager reloading.</p>",
+                "",
+                "<p>Called after model registry is setup, but before it's passed to {@link net.minecraft.client.renderer.BlockModelShapes}",
+                "for block model baking. This can be used to modify and wrap models before they are sent for model baking.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext#getModEventBus()",
+                "mod-specific event bus}, only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}",
+                "</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onModelBake(ModelManager, Map, ModelLoader)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getModelManager",
+                "descriptor" : "()Lnet/minecraft/client/renderer/model/ModelManager;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the {@link ModelManager}."
+                    ],
+                    "tags" : {
+                        "return" : "The model manager"
+                    }
+                }
+            },
+            {
+                "name" : "getModelRegistry",
+                "descriptor" : "()Ljava/util/Map;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns a modifiable map of {@link ResourceLocation ResourceLocations} and their corresponding models.",
+                        "",
+                        "The {@code ResourceLocation}s in the map can also be instances of {@link ModelResourceLocation},",
+                        "for e.g. models for block states and their variants."
+                    ],
+                    "tags" : {
+                        "return" : "The modifiable registry map of models and their model names"
+                    }
+                }
+            },
+            {
+                "name" : "getModelLoader",
+                "descriptor" : "()Lnet/minecraftforge/client/model/ModelLoader;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the currently active {@link ModelLoader}."
+                    ],
+                    "tags" : {
+                        "return" : "The model loader"
+                    }
+                }
+            }
+        ]
+    }
+]

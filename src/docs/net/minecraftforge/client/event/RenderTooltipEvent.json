@@ -1,0 +1,448 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a tooltip is rendering or rendered on the screen.",
+                "See the various subclasses for listening to specific events.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.fml.client.gui.GuiUtils#drawHoveringText(ItemStack, MatrixStack, List, int, int, int, int, int, int, int, int, FontRenderer)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getStack",
+                "descriptor" : "()Lnet/minecraft/item/ItemStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ItemStack} for which the tooltip is being rendered.</p>",
+                        "",
+                        "<p>In certain situations where a tooltip is rendered without an {@link ItemStack}, this will be {@link ItemStack#EMPTY}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The stack which the tooltip is being rendered for, may be {@link ItemStack#EMPTY}"
+                    }
+                }
+            },
+            {
+                "name" : "getLines",
+                "descriptor" : "()Ljava/util/List;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an unmodifiable view of the lines of text on the tooltip, as represented by a list of {@link ITextProperties}.",
+                        "This may change between {@link RenderTooltipEvent.Pre} and {@link RenderTooltipEvent.Post}.</p>",
+                        "",
+                        "<p><em>Use {@link ItemTooltipEvent} to modify the text of the tooltip.</em></p>"
+                    ],
+                    "tags" : {
+                        "return" : "An unmodifiable view of list of text on the tooltip",
+                        "see" : "ItemTooltipEvent"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering the tooltip.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getX",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X position of where the tooltip box will be rendered.",
+                        "When rendering a tooltip for an itemstack, this will by default the X position of the mouse cursor.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X position of the tooltip box",
+                        "see" : "RenderTooltipEvent.Pre#setX(int)"
+                    }
+                }
+            },
+            {
+                "name" : "getY",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the Y position of where the tooltip box will be rendered.",
+                        "When rendering a tooltip for an itemstack, this will by default be the Y position of the mouse cursor.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y position of the tooltip box",
+                        "see" : "RenderTooltipEvent.Pre#setY(int)"
+                    }
+                }
+            },
+            {
+                "name" : "getFontRenderer",
+                "descriptor" : "()Lnet/minecraft/client/gui/FontRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link FontRenderer} used for rendering the text.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The font renderer",
+                        "see" : "RenderTooltipEvent.Pre#setFontRenderer(FontRenderer)"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent$Pre",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>before</b> the tooltip is rendered.",
+                "This can be used to modify the positioning of the tooltip.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the tooltip will not be rendered and the corresponding",
+                "{@link RenderTooltipEvent.Color}, {@link RenderTooltipEvent.PostBackground}, and",
+                "{@link RenderTooltipEvent.PostText} will not be fired.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getScreenWidth",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the perceived width of the screen.",
+                        "This is used in wrapping the tooltip text within the bounds of the screen.</p>",
+                        "",
+                        "<p>This may not reflect the actual dimensions of the game window/screen,",
+                        "as it can be adjusted using {@link Pre#setScreenWidth(int)}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The perceived width of the screen"
+                    }
+                }
+            },
+            {
+                "name" : "setScreenWidth",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new perceived width of the screen.",
+                        "This is used in wrapping the tooltip text within the bounds of the screen.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "screenWidth The new perceived width of the screen."
+                    }
+                }
+            },
+            {
+                "name" : "getScreenHeight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the perceived height of the screen.",
+                        "This is used in wrapping the tooltip text within the bounds of the screen.</p>",
+                        "",
+                        "<p>This may not reflect the actual dimensions of the game window/screen,",
+                        "as it can be adjusted using {@link Pre#setScreenHeight(int)}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The perceived height of the screen"
+                    }
+                }
+            },
+            {
+                "name" : "setScreenHeight",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new perceived height of the screen.",
+                        "This is used in wrapping the tooltip text within the bounds of the screen.<p>"
+                    ],
+                    "tags" : {
+                        "param" : "screenHeight The new perceived height of the screen."
+                    }
+                }
+            },
+            {
+                "name" : "getMaxWidth",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the maximum width of the tooltip when being rendered.",
+                        "A value of {@code -1} means an unlimited maximum width.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The maximum width of the tooltip"
+                    }
+                }
+            },
+            {
+                "name" : "setMaxWidth",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the maximum width of the tooltip.",
+                        "Use {@code -1} for unlimited maximum width.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "maxWidth The new maximum width of the tooltip"
+                    }
+                }
+            },
+            {
+                "name" : "setFontRenderer",
+                "descriptor" : "(Lnet/minecraft/client/gui/FontRenderer;)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the {@link FontRenderer} to be used to render text.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "fr The new font renderer"
+                    }
+                }
+            },
+            {
+                "name" : "setX",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new X position of where the tooltip box will be rendered.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "x The new X position of the tooltip"
+                    }
+                }
+            },
+            {
+                "name" : "setY",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new Y position of where the tooltip box will be rendered.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "y The new Y position of the tooltip"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent$Post",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the tooltip is rendered, at different points.",
+                "See the two subclasses for listening to after background or after text rendering.</p>"
+            ],
+            "tags" : {
+                "see" : "RenderTooltipEvent.PostText"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getWidth",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the width of the inner tooltip box, which does not include the border's width.<p>"
+                    ],
+                    "tags" : {
+                        "return" : "The width of the inner tooltip box (not including border)"
+                    }
+                }
+            },
+            {
+                "name" : "getHeight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the height of the inner tooltip box, which does not include the border's height.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The height of the inner tooltip box (not including border)"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent$PostBackground",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the tooltip background is rendered, and <em>before</em> the tooltip text is rendered.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent$PostText",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <b>after</b> the tooltip text is rendered.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderTooltipEvent$Color",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired <em>directly <b>before</b> the tooltip background</em> is rendered.",
+                "This can be used to modify the background color and the border's gradient colors.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getBackground",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the background color of the tooltip.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The background color of the tooltip"
+                    }
+                }
+            },
+            {
+                "name" : "setBackground",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new color for the background of the tooltip.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "param" : "background the new tooltip background color"
+                    }
+                }
+            },
+            {
+                "name" : "getBorderStart",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the start color of the tooltip's border.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The start color for the tooltip border"
+                    }
+                }
+            },
+            {
+                "name" : "setBorderStart",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new start color for the gradient of the tooltip border.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "param" : "borderStart the new start color for the tooltip border"
+                    }
+                }
+            },
+            {
+                "name" : "getBorderEnd",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the end color of the tooltip's border.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the end color for the tooltip border"
+                    }
+                }
+            },
+            {
+                "name" : "setBorderEnd",
+                "descriptor" : "(I)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets the new end color for the gradient of the tooltip border.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "param" : "borderEnd the new end color for the tooltip border"
+                    }
+                }
+            },
+            {
+                "name" : "getOriginalBackground",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original color of the tooltip's background, before any modifications by this event.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the original tooltip background color"
+                    }
+                }
+            },
+            {
+                "name" : "getOriginalBorderStart",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original start color of the tooltip's border, before any modifications by this event.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the original tooltip border's start color"
+                    }
+                }
+            },
+            {
+                "name" : "getOriginalBorderEnd",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the original end color of the tooltip's border, before any modifications by this event.</p>",
+                        "",
+                        "<p>The color is packed as a number in ARGB format ({@code #AARRGGBB}).</p>"
+                    ],
+                    "tags" : {
+                        "return" : "the original tooltip border's end color"
+                    }
+                }
+            }
+        ]
+    }
+]

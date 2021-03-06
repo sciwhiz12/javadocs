@@ -1,0 +1,120 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderBlockOverlayEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before a block texture will be overlaid on the player's view.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the overlay will not be rendered.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.event.ForgeEventFactory#renderBlockOverlay(PlayerEntity, MatrixStack, OverlayType, BlockState, BlockPos)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getPlayer",
+                "descriptor" : "()Lnet/minecraft/entity/player/PlayerEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link PlayerEntity} which the overlay will render for.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The player which the overlay will apply to"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrixStack",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getOverlayType",
+                "descriptor" : "()Lnet/minecraftforge/client/event/RenderBlockOverlayEvent/OverlayType;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the type of the overlay being rendered, according to {@link OverlayType}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The type of the overlay"
+                    }
+                }
+            },
+            {
+                "name" : "getBlockForOverlay",
+                "descriptor" : "()Lnet/minecraft/block/BlockState;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the {@linkplain BlockState block state} which will be overlaid on the player's screen."
+                    ],
+                    "tags" : {
+                        "return" : "The block from which the overlay is gotten from"
+                    }
+                }
+            },
+            {
+                "name" : "getBlockPos",
+                "descriptor" : "()Lnet/minecraft/util/math/BlockPos;",
+                "javadoc" : {
+                    "description" : [
+                        "Returns the {@link BlockPos} of the {@linkplain #getBlockForOverlay() block state} which will be overlaid on the",
+                        "player's screen."
+                    ],
+                    "tags" : {
+                        "return" : "The position of the block from which the overlay is gotten from"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.RenderBlockOverlayEvent$OverlayType",
+        "javadoc" : {
+            "description" : [
+                "<p>Defines the different overlays that may be rendered.</p>"
+            ],
+            "tags" : {
+                "see" : "RenderBlockOverlayEvent"
+            }
+        },
+        "fields" : [
+            {
+                "name" : "FIRE",
+                "javadoc" : {
+                    "description" : [
+                        "<p>The overlay type when the player is burning / on fire.</p>"
+                    ]
+                }
+            },
+            {
+                "name" : "BLOCK",
+                "javadoc" : {
+                    "description" : [
+                        "<p>The overlay type when the player is suffocating inside a solid block.</p>"
+                    ]
+                }
+            },
+            {
+                "name" : "WATER",
+                "javadoc" : {
+                    "description" : [
+                        "<p>The overlay type when the player is underwater.</p>"
+                    ]
+                }
+            }
+        ]
+    }
+]

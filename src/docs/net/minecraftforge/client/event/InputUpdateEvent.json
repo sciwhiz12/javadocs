@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.InputUpdateEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired after player movement inputs are updated.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onInputUpdate(PlayerEntity, MovementInput)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getMovementInput",
+                "descriptor" : "()Lnet/minecraft/util/MovementInput;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the player's current movement inputs.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The player's movement inputs"
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,151 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.DrawHighlightEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before a selection highlight is rendered.",
+                "See the two subclasses to listen for blocks or entities.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onDrawBlockHighlight(WorldRenderer, ActiveRenderInfo, RayTraceResult, float, MatrixStack, IRenderTypeBuffer)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getContext",
+                "descriptor" : "()Lnet/minecraft/client/renderer/WorldRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link WorldRenderer}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The world renderer"
+                    }
+                }
+            },
+            {
+                "name" : "getInfo",
+                "descriptor" : "()Lnet/minecraft/client/renderer/ActiveRenderInfo;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ActiveRenderInfo} containing the information for the current rendering context.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The active render information"
+                    }
+                }
+            },
+            {
+                "name" : "getTarget",
+                "descriptor" : "()Lnet/minecraft/util/math/RayTraceResult;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link RayTraceResult}, representing the object at the position of the player's mouse.</p>",
+                        "",
+                        "<p>Subclasses of this event override this method to return a more specific subclass of {@link RayTraceResult}, such as",
+                        "{@link BlockRayTraceResult}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The target of the highlight",
+                        "see" : "HighlightEntity#getTarget()"
+                    }
+                }
+            },
+            {
+                "name" : "getPartialTicks",
+                "descriptor" : "()F",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the partial amount of ticks between the last and next render tick.",
+                        "This will be in the range of {@code 0.0F} to {@code 1.0F}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of partial ticks"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrix",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getBuffers",
+                "descriptor" : "()Lnet/minecraft/client/renderer/IRenderTypeBuffer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link IRenderTypeBuffer} currently being used for rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The rendering buffers"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.DrawHighlightEvent$HighlightBlock",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before a block's selection highlight is rendered.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, then the block selection highlight will not be rendered.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getTarget",
+                "descriptor" : "()Lnet/minecraft/util/math/BlockRayTraceResult;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link BlockRayTraceResult}, representing the block at the position of the player's mouse.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The block target of the highlight"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.DrawHighlightEvent$HighlightEntity",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before a block's selection highlight is rendered.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "Cancelling this event has no effect.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ]
+        },
+        "methods" : [
+            {
+                "name" : "getTarget",
+                "descriptor" : "()Lnet/minecraft/util/math/EntityRayTraceResult;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link EntityRayTraceResult}, representing the entity at the position of the player's mouse.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The entity target of the highlight"
+                    }
+                }
+            }
+        ]
+    }
+]

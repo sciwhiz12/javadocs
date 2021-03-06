@@ -1,0 +1,429 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when an input is detected from the user's input devices.",
+                "See the various subclasses to listen for specific devices and inputs.</p>"
+            ],
+            "tags" : {
+                "see" : "InputEvent.ClickInputEvent"
+            }
+        }
+    },
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent$RawMouseEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a mouse button is clicked, <b>before</b> being processed by vanilla code.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, then the mouse event will not be processed by vanilla code (e.g. keybinds and screens).</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "<a href=\"https://www.glfw.org/docs/latest/input_guide.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getButton",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW key code of the clicked mouse button.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The key code of the clicked mouse button",
+                        "see" : "<a href=\"http://www.glfw.org/docs/latest/input.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            },
+            {
+                "name" : "getAction",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the action constant of the mouse button which triggered this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The mouse button's action constant",
+                        "see" : "GLFW#GLFW_RELEASE"
+                    }
+                }
+            },
+            {
+                "name" : "getMods",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns a bit field number representing the currently active modifier keys.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "A bit field representing the active modifier keys",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__mods.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent$MouseInputEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a mouse button is clicked, <b>after</b> processing by vanilla code.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "<a href=\"https://www.glfw.org/docs/latest/input_guide.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getButton",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW key code of the mouse button which triggered this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The key code of the mouse button",
+                        "see" : "<a href=\"http://www.glfw.org/docs/latest/input.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            },
+            {
+                "name" : "getAction",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the action constant of the mouse button action which triggered this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The mouse button's action constant",
+                        "see" : "GLFW#GLFW_RELEASE"
+                    }
+                }
+            },
+            {
+                "name" : "getMods",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns a bit field number representing the currently active modifier keys.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "A bit field representing the active modifier keys",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__mods.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent$MouseScrollEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a mouse scroll wheel is used outside of a screen and a player is loaded,",
+                "<b>before</b> being processed by vanilla code.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, then the mouse scroll event will not be processed further.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "<a href=\"https://www.glfw.org/docs/latest/input_guide.html#input_mouse_button\" target=\"_top\">the online GLFW documentation</a>"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getScrollDelta",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the amount of change or <em>delta</em> of the mouse scroll wheel.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The delta of the mouse scroll"
+                    }
+                }
+            },
+            {
+                "name" : "isLeftDown",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the left mouse button is currently pressed down.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the left mouse button is pressed"
+                    }
+                }
+            },
+            {
+                "name" : "isRightDown",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the right mouse button is currently pressed down.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the right mouse button is pressed"
+                    }
+                }
+            },
+            {
+                "name" : "isMiddleDown",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the middle mouse button is currently pressed down.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the middle mouse button is pressed"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseX",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window}",
+                        "of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The X position of the mouse cursor"
+                    }
+                }
+            },
+            {
+                "name" : "getMouseY",
+                "descriptor" : "()D",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the X coordinate of the mouse pointer, relative to the {@link net.minecraft.client.MainWindow main window}",
+                        "of the game.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The Y position of the mouse cursor"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent$KeyInputEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a keyboard key input occurs, such as pressing, releasing, or repeating a key.</p>",
+                "",
+                "<p>This event is <em>not</em> {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "InputMappings#getInputByCode(int, int)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getKey",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the GLFW (platform-agnostic) key code of the keyboard key.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The GLFW (platform-agnostic) key code",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__keys.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            },
+            {
+                "name" : "getScanCode",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the platform-specific scan code of the keyboard key.</p>",
+                        "",
+                        "<p>The scan code is unique for every key, regardless of whether it has a key code.",
+                        "Scan codes are platform-specific but consistent over time, so keys will have different scan codes depending",
+                        "on the platform but they are safe to save to disk as custom key bindings.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The platform-specific scan code"
+                    }
+                }
+            },
+            {
+                "name" : "getAction",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the action constant of the keyboard key action which triggered this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The keyboard key's action constant",
+                        "see" : "GLFW#GLFW_REPEAT"
+                    }
+                }
+            },
+            {
+                "name" : "getModifiers",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns a bit field number representing the currently active modifier keys.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "A bit field representing the active modifier keys",
+                        "see" : "<a href=\"https://www.glfw.org/docs/latest/group__mods.html\" target=\"_top\">the online GLFW documentation</a>"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "name" : "net.minecraftforge.client.event.InputEvent$ClickInputEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired when a keybinding that involves clicking the mouse buttons is triggered.</p>",
+                "",
+                "<p>The key bindings that trigger this event are:</p>",
+                "<ul>",
+                "    <li>{@link net.minecraft.client.GameSettings#keyBindAttack <b>Attack</b>} - defaults to <em>left mouse click</em></li>",
+                "    <li>{@link net.minecraft.client.GameSettings#keyBindUseItem <b>Use Item</b>} - defaults to <em>right mouse click</em></li>",
+                "    <li>{@link net.minecraft.client.GameSettings#keyBindPickBlock <b>Pick Block</b>} - defaults to <em>middle mouse click</em></li>",
+                "</ul>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If this event is cancelled, then the keybind's action is not processed further, and the hand will be swung",
+                "according to {@link #shouldSwingHand()}</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "net.minecraftforge.client.ForgeHooksClient#onClickInput(int, KeyBinding, Hand)"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "setSwingHand",
+                "descriptor" : "(Z)V",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Sets whether to swing the player entity's hand.",
+                        "This takes effect even if the event is cancelled.",
+                        "The default value is {@code true}.</p>"
+                    ],
+                    "tags" : {
+                        "param" : "value whether to swing the hand"
+                    }
+                }
+            },
+            {
+                "name" : "shouldSwingHand",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns whether to swing the player entity's hand.",
+                        "This takes effect even if the event is cancelled.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "Whether to swing the hand",
+                        "see" : "#setSwingHand(boolean)"
+                    }
+                }
+            },
+            {
+                "name" : "getHand",
+                "descriptor" : "()Lnet/minecraft/util/Hand;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the hand which triggered this event.</p>",
+                        "",
+                        "<p>The event will be called for both hands if this is a <em>use item</em> action,",
+                        "regardless of both event's cancellation.",
+                        "This will always be {@link Hand}#MAIN_HAND if this is an attack or pick block input.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The hand causing the input"
+                    }
+                }
+            },
+            {
+                "name" : "isAttack",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the clicked mouse button is the left mouse button.</p>",
+                        "",
+                        "<p>This is named due to the left mouse button being the default",
+                        "{@link net.minecraft.client.GameSettings#keyBindAttack <b>Attack</b> keybind}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the mouse button is the left mouse button"
+                    }
+                }
+            },
+            {
+                "name" : "isUseItem",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the clicked mouse button is the right mouse button.</p>",
+                        "",
+                        "<p>This is named due to the right mouse button being the default",
+                        "{@link net.minecraft.client.GameSettings#keyBindUseItem <b>Use Item</b> keybind}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the mouse button is the right mouse button"
+                    }
+                }
+            },
+            {
+                "name" : "isPickBlock",
+                "descriptor" : "()Z",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns if the clicked mouse button is the middle mouse button.</p>",
+                        "",
+                        "<p>This is named due to the middle mouse button being the default",
+                        "{@link net.minecraft.client.GameSettings#keyBindPickBlock <b>Pick Block</b> keybind}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "if the mouse button is the middle mouse button"
+                    }
+                }
+            },
+            {
+                "name" : "getKeyBinding",
+                "descriptor" : "()Lnet/minecraft/client/settings/KeyBinding;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link KeyBinding} that triggered this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The keybinding that triggered this event"
+                    }
+                }
+            }
+        ]
+    }
+]

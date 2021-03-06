@@ -1,0 +1,97 @@
+[
+    {
+        "name" : "net.minecraftforge.client.event.RenderItemInFrameEvent",
+        "javadoc" : {
+            "description" : [
+                "<p>Fired before an item stack is rendered in an item frame.",
+                "This can be used to prevent normal rendering and add custom rendering.</p>",
+                "",
+                "<p>This event is {@linkplain net.minecraftforge.eventbus.api.Cancelable cancellable}, and <em>does not</em>",
+                "{@linkplain HasResult have a result}.",
+                "If the event is cancelled, then the item frame's item stack will not be rendered.</p>",
+                "",
+                "<p>This event is fired on the {@linkplain net.minecraftforge.common.MinecraftForge#EVENT_BUS main Forge event bus},",
+                "only on the <strong>{@linkplain net.minecraftforge.fml.LogicalSide#CLIENT logical client}</strong>.</p>"
+            ],
+            "tags" : {
+                "see" : "ItemFrameRenderer"
+            }
+        },
+        "methods" : [
+            {
+                "name" : "getItem",
+                "descriptor" : "()Lnet/minecraft/item/ItemStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ItemStack} stored in the {@link #getEntityItemFrame() item frame entity} that will be rendered.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The item stack being rendered"
+                    }
+                }
+            },
+            {
+                "name" : "getEntityItemFrame",
+                "descriptor" : "()Lnet/minecraft/entity/item/ItemFrameEntity;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ItemFrameEntity} for this event.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The item frame entity"
+                    }
+                }
+            },
+            {
+                "name" : "getRenderer",
+                "descriptor" : "()Lnet/minecraft/client/renderer/entity/ItemFrameRenderer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link ItemFrameRenderer renderer} for the {@linkplain #getEntityItemFrame() item frame entity}.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The renderer for the item frame entity"
+                    }
+                }
+            },
+            {
+                "name" : "getMatrix",
+                "descriptor" : "()Lcom/mojang/blaze3d/matrix/MatrixStack;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link MatrixStack} used for transformations, rotations, and scaling in rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The matrix stack used for rendering"
+                    }
+                }
+            },
+            {
+                "name" : "getBuffers",
+                "descriptor" : "()Lnet/minecraft/client/renderer/IRenderTypeBuffer;",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns the {@link IRenderTypeBuffer} currently being used for rendering.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The rendering buffers"
+                    }
+                }
+            },
+            {
+                "name" : "getLight",
+                "descriptor" : "()I",
+                "javadoc" : {
+                    "description" : [
+                        "<p>Returns an integer packed with the sky and block light.",
+                        "This is used in rendering to determine the color of the light level of the block, according to the light texture.</p>"
+                    ],
+                    "tags" : {
+                        "return" : "The amount of packed light for rendering",
+                        "see" : "net.minecraft.client.renderer.LightTexture#getLightSky(int)"
+                    }
+                }
+            }
+        ]
+    }
+]
